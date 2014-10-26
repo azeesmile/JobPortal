@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "UserProfessional";
+    Layout = "~/Views/Shared/_ProfileLayout.cshtml";
+}
+
+<div class="content">
+    <form method="post" action="http://bestwebholding.com/demo_theme/opening-job-board-html-template/user_profile_settings.html">
+        <div class="post edit-company">
+            <div class="post-header">
+                <h2>User Acedamic Profile</h2>
+                <a class="edit-link" href="user_profile_settings.html">[Edit]</a><a class="company-openings" href="#">View my profile</a>
+            </div>
+            <!-- .post-header -->
+            <ul>
+                <li class="settings-field">
+                    <input type="text" id="experience" name="Experience" required placeholder="Enter your Experience.">
+
+                    <input type="text" id="LastDesignation" name="LastDesignation" required placeholder="Enter your Last Designation in Previous.">
+
+                    <input type="text" id="Company" name="Company" required placeholder="Enter your Previous Company Name ">
+
+                    <input type="text" id="Salary" name="Salary" required placeholder="Enter your Salary .">
+
+                    <input type="text" id="Interest Area" name="Interest Area" required placeholder="Enter your Interest Area .">
+
+                    <input type="text" id="Skills" name="Skills" required placeholder="Enter your Skills .">
+
+
+
+
+
+
+
+
+                </li>
+                <!-- .settings-field -->
+                <li class="settings-field">
+                    <input name="resume" type="file" />
+                    <p class="info"> You can upload ur documents in pdf(Optional)</p>
+                </li>
+
+                <!-- .settings-field -->
+            </ul>
+        </div>
+        <!-- .post -->
+        <input type="submit" value="Save" />
+        <input type="reset" value="Cancel" />
+    </form>
+    <!-- form -->
+</div>
+

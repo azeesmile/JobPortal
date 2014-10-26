@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<!--[if IE 7]><html class = "ie7"><![endif]-->
+<!--[if IE 8]><html class = "ie8"><![endif]-->
+<!--[if IE 9]><html class = "ie9"><![endif]-->
+<!--[if !(IE 7) | !(IE 8) | !(IE 9) ]><!-->
+<html>
+<!--<![endif]-->
+<head>
+    <title>@ViewBag.Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    @Styles.Render("~/FrontEnd/Content/css")
+    @Scripts.Render("~/FrontEnd/bundles/jquery")
+    <!--[if IE]><script src="js/html5.js"></script><link rel="stylesheet" type="text/css" href="css/ie.css"><![endif]-->
+</head>
+<body>
+    <div class="wrapper with-slider version2">
+        <header>
+            <div class="site-header">
+                @Html.Partial("~/Areas/FrontEnd/Views/Partial/sitetitle.cshtml")
+                <!-- .site-title -->
+                @Html.Partial("~/Areas/FrontEnd/Views/Partial/sitenav.cshtml")
+                <!-- .site-nav -->
+                @Html.Partial("~/Areas/FrontEnd/Views/Partial/userarea.cshtml")
+                <!-- .user-area -->
+            </div>
+            <!-- .site-header -->
+        </header>
+        <!-- header -->
+        <!-- slider -->
+        @RenderSection("slider", required: false)
+        <!-- slider-end -->
+
+        <div class="main clearfix">
+            @RenderBody()
+            <!-- .content -->
+            <!-- .sidebar -->
+        </div>
+        <!-- .main -->
+        <footer>
+            <div class="site-footer">
+                @Html.Partial("~/Areas/FrontEnd/Views/Partial/sitetitle.cshtml")
+                <!-- .site-title -->
+                @Html.Partial("~/Areas/FrontEnd/Views/Partial/footer-nav.cshtml")
+                <!-- .site-nav -->
+                @Html.Partial("~/Areas/FrontEnd/Views/Partial/sociallinks.cshtml")
+                <!-- .links -->
+            </div>
+            <!-- .site-footer -->
+        </footer>
+        <!-- footer -->
+    </div>
+    <!-- .wrapper -->
+    @Scripts.Render("~/FrontEnd/bundles/scripts")
+</body>
+</html>

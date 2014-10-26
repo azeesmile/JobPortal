@@ -1,0 +1,227 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Areas/FrontEnd/Views/Shared/_HomeLayout.cshtml";
+}
+
+@section slider {
+    @Html.Partial("~/Areas/FrontEnd/Views/Partial/slider.cshtml")
+}
+
+<div class="search-wrapper">
+    <form class="opening-search" method="post" action="http://bestwebholding.com/demo_theme/opening-job-board-html-template/home_v.2.html">
+        <div class="search-top clearfix">
+            <div class="search-field">
+                <label>
+                    Keyword<br />
+                    <input name="keyword" id="keyword" type="text" />
+                </label>
+                <!-- #keyword -->
+            </div>
+            <!-- .search-field -->
+            <div class="search-field">
+                <label>
+                    Location<br />
+                    <input class="with-dropdown" name="location" id="location" type="text" />
+                    <a class="zip-codes" href="#">Zip codes</a>
+                </label>
+                <ul id="dropdown-location" class="dropdown">
+                    <li>
+                        <input name="new_york" type="checkbox" />
+                        New York
+                    </li>
+                    <li>
+                        <input name="washngton" type="checkbox" />
+                        Washington
+                    </li>
+                    <li>
+                        <input name="los_angeles" checked="checked" type="checkbox" />
+                        Los Angeles
+                    </li>
+                    <li>
+                        <input name="miami" type="checkbox" />
+                        Miami
+                    </li>
+                    <li>
+                        <input name="london" type="checkbox" />
+                        London
+                    </li>
+                </ul>
+                <!-- #location -->
+            </div>
+            <div class="search-field">
+                <label>
+                    Category<br />
+                    <input class="with-dropdown" id="category" type="text" />
+                </label>
+                <!-- #category -->
+                <ul id="dropdown-category" class="dropdown">
+                    <li>
+                        <input name="new_york" type="checkbox" />
+                        New York
+                    </li>
+                    <li>
+                        <input name="washngton" type="checkbox" />
+                        Washington
+                    </li>
+                    <li>
+                        <input name="los_angeles" checked="checked" type="checkbox" />
+                        Los Angeles
+                    </li>
+                    <li>
+                        <input name="miami" type="checkbox" />
+                        Miami
+                    </li>
+                    <li>
+                        <input name="london" type="checkbox" />
+                        London
+                    </li>
+                </ul>
+            </div>
+            <!-- .search-field -->
+            <button class="search-button clearfix"></button>
+        </div>
+        <div class="search-bottom">
+            <label>
+                <input class="dark" name="full-time" type="checkbox" />
+                Full-time
+            </label>
+            <label>
+                <input class="dark" name="contract" type="checkbox" />
+                Contract
+            </label>
+            <label>
+                <input class="dark" checked name="freelance" type="checkbox" />
+                Freelance
+            </label>
+        </div>
+        <!-- .search-bootom -->
+    </form>
+    <!-- .opening-search -->
+</div>
+<div class="content">
+    <div class="post">
+        <div class="post-header">
+            <p class="results"><span>5</span> of <span>62</span> opening(-s)</p>
+            <label class="sort">
+                Sort:
+                <select>
+                    <option>By date</option>
+                    <option>By name</option>
+                </select>
+            </label>
+            <!-- .sort -->
+        </div>
+        <!-- .post_header -->
+        <div class="table-wrapper">
+            <table class="openings">
+                <tr class="opening">
+                    <td class="opening-logo">
+                        <div class="star"></div>
+                        <a href="opening.html"><img src="~/Areas/FrontEnd/Images/opening-logo.png" alt="Logo" /></a>
+                    </td>
+                    <td class="opening-meta">
+                        <h2><a href="opening.html" class="opening-name">Senior Graphic Designer</a></h2>
+                        <h3><a href="company_profile.html" class="company">BestWebHolding</a></h3>
+                    </td>
+                    <td class="opening-type"><p class="freelance">Freelance</p></td>
+                    <td class="opening-location"><p><a href="#">New York</a></p></td>
+                </tr>
+                <!-- .opening -->
+                <tr class="opening">
+                    <td class="opening-logo">
+                        <div class="star star-checked"></div>
+                        <a href="opening.html"><img src="~/Areas/FrontEnd/Images/opening-logo.png" alt="Logo" /></a>
+                    </td>
+                    <td class="opening-meta">
+                        <h2><a href="opening.html" class="opening-name">Web Developer</a></h2>
+                        <h3><a href="company_profile.html" class="company">Envato</a></h3>
+                    </td>
+                    <td class="opening-type"><p class="full-time">Full-time</p></td>
+                    <td class="opening-location"><p><a href="#">Washington</a></p></td>
+                </tr>
+                <!-- .opening -->
+                <tr class="opening">
+                    <td class="opening-logo">
+                        <div class="star"></div>
+                        <a href="opening.html"><img src="~/Areas/FrontEnd/Images/opening-logo.png" alt="Logo" /></a>
+                    </td>
+                    <td class="opening-meta">
+                        <h2><a href="opening.html" class="opening-name">UX Designer</a></h2>
+                        <h3><a href="company_profile.html" class="company">BestWebHolding</a></h3>
+                    </td>
+                    <td class="opening-type"><p class="contract">Contract</p></td>
+                    <td class="opening-location"><p><a href="#">Los Angeles</a></p></td>
+                </tr>
+                <!-- .opening -->
+                <tr class="opening">
+                    <td class="opening-logo">
+                        <div class="star"></div>
+                        <a href="opening.html"><img src="~/Areas/FrontEnd/Images/opening-logo.png" alt="Logo" /></a>
+                    </td>
+                    <td class="opening-meta">
+                        <h2><a href="opening.html" class="opening-name">Product Manager</a></h2>
+                        <h3><a href="company_profile.html" class="company">BestWebHolding</a></h3>
+                    </td>
+                    <td class="opening-type"><p class="freelance">Freelance</p></td>
+                    <td class="opening-location"><p><a href="#">Miami</a></p></td>
+                </tr>
+                <!-- .opening -->
+                <tr class="opening">
+                    <td class="opening-logo">
+                        <div class="star"></div>
+                        <a href="opening.html"><img src="~/Areas/FrontEnd/Images/opening-logo.png" alt="Logo" /></a>
+                    </td>
+                    <td class="opening-meta">
+                        <h2><a href="opening.html" class="opening-name">ROR Developer</a></h2>
+                        <h3><a href="company_profile.html" class="company">Envato</a></h3>
+                    </td>
+                    <td class="opening-type"><p class="freelance">Freelance</p></td>
+                    <td class="opening-location"><p><a href="#">London</a></p></td>
+                </tr>
+                <!-- .opening -->
+            </table>
+            <!-- .openings -->
+        </div>
+        <!-- .table-wrapper -->
+    </div>
+    <!-- .openings -->
+    <nav class="paging">
+        <ul>
+            <li class="neighbour"><a href="home_v.2.html">Prev</a></li>
+            <li class="current"><a href="home_v.2.html">1</a></li>
+            <li><a href="home_v.1.html">2</a></li>
+            <li><a href="home_v.3.html">3</a></li>
+            <li><span class="dots">...</span></li>
+            <li><a href="home_v.4.html">10</a></li>
+            <li><a href="home_v.2.html">11</a></li>
+            <li><a href="home_v.2.html">12</a></li>
+            <li class="neighbour"><a href="home_v.2.html">Next</a></li>
+        </ul>
+    </nav>
+    <!-- .paging -->
+</div>
+<!-- .content -->
+<aside class="sidebar">
+    <div class="widget add-opening">
+        <button>Add opening</button>
+        <div class="plus">+</div>
+    </div>
+    <!-- .add-opening -->
+    <div class="widget">
+        <h3>Text widget</h3>
+        <p>Proin at risus augue. Proin sapien est, convallis vitae ligula vitae, fermentum viverra erat.</p>
+    </div>
+    <!-- text widget -->
+    <div class="widget newsletter">
+        <h3>Newsletter</h3>
+        <input name="email" type="email" />
+        <p class="info"><span class="required">*</span> You will get a notification email</p>
+    </div>
+    <!-- .newsletter -->
+    <div class="widget video">
+        <iframe width="242" height="151" src="http://www.youtube.com/embed/H1pWTxVVc2E?list=UU5L2rnrf7WCd8GaqsZvnJOw" frameborder="0" ></iframe>
+        <p class="video-title">Video title usage example</p>
+    </div>
+    <!-- .video -->
+</aside>
+<!-- .sidebar -->

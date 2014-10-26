@@ -1,0 +1,88 @@
+﻿@{
+    ViewBag.Title = "UserAcademic";
+    Layout = "~/Views/Shared/_ProfileLayout.cshtml";
+}
+
+<div class="content">
+    <form method="post" action="http://bestwebholding.com/demo_theme/opening-job-board-html-template/user_profile_settings.html">
+        <div class="post edit-company">
+            <div class="post-header">
+                <h2>User Acedamic Profile</h2>
+                <a class="edit-link" href="user_profile_settings.html">[Edit]</a><a class="company-openings" href="#">View my profile</a>
+            </div>
+            <!-- .post-header -->
+            <ul>
+                <li class="settings-field">
+                    <h3 style=" padding:1px;  color: #ACACAC;  font-size:12pt; font-weight:200; text-transform:uppercase;"> Matriculation Details</h3>
+                    <input type="text" id="MatricInstitution" name="MatricInstitution" required placeholder="Enter your MatricInstitution.">
+
+                    <input type="text" id="Matricsubject" name="Matricsubjest" required placeholder="Enter your subjects in Matric.">
+
+
+
+                    <div id="contacts">
+                        <input name="marks" required type="text" placeholder="Obtained Marks" />
+                        <input name="Year" required type="text" placeholder="Year" />
+
+                    </div>
+                <li class="settings-field">
+                    <h3 style=" padding:1px;  color: #ACACAC;  font-size:12pt; font-weight:200; text-transform:uppercase;"> Intermediate Details</h3>
+                    <input type="text" id="InterInstitution" name="InterInstitution" required placeholder="Enter your Intermediate Institution.">
+
+                    <input type="text" id="Intersubject" name="Intersubjest" required placeholder="Enter your subjects in Intermediate.">
+
+
+
+                    <div id="contacts">
+                        <input name="marks" required type="text" placeholder="Obtained Marks" />
+                        <input name="Year" required type="text" placeholder="Year" />
+
+                    </div>
+                </li>
+                <li class="settings-field">
+                    <h3 style=" padding:1px;  color: #ACACAC;  font-size:12pt; font-weight:200; text-transform:uppercase;"> Graduation Details</h3>
+                    <input type="text" id="GradInstitution" name="GradInstitution" required placeholder="Enter your Graduation Institution.">
+
+                    <input type="text" id="Gradsubject" name="Gradsubjest" required placeholder="Enter your subjects in Graduation.">
+
+
+
+                    <div id="contacts">
+                        <input name="marks" required type="text" placeholder="Obtained Marks / CGPA" />
+                        <input name="Year" required type="text" placeholder="Year" />
+
+                    </div>
+                </li>
+                <li class="settings-field">
+                    <h3 style=" padding:1px;  color: #ACACAC;  font-size:12pt; font-weight:200; text-transform:uppercase;"> PostGraduation Details</h3>
+                    <input type="text" id="PostGradInstitution" name="PostGradInstitution" required placeholder="Enter your Post Graduation Institution.">
+
+                    <input type="text" id="PostGradsubject" name="PostGradsubjest" required placeholder="Enter your subjects in PostGraduation.">
+
+
+
+
+                    <div id="contacts">
+                        <input name="marks" required type="text" placeholder="Obtained Marks / CGPA" />
+                        <input name="Year" required type="text" placeholder="Year" />
+
+                    </div>
+                </li>
+                <!-- .settings-field -->
+                <li class="settings-field">
+                    <input name="resume" type="file" />
+                    <p class="info"> You can upload ur documents in pdf (Optional)</p>
+                </li>
+
+                <!-- .settings-field -->
+            </ul>
+        </div>
+        <!-- .post -->
+        <input type="submit" value="Next" />
+        <input type="submit" value="Save" />
+        <input type="reset" value="Cancel" />
+    </form>
+    <!-- form -->
+</div>
+
+

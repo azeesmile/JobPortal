@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "UserProfile";
+    Layout = "~/Views/Shared/_ProfileLayout.cshtml";
+}
+
+<div class="content">
+    <form method="post" action="http://bestwebholding.com/demo_theme/opening-job-board-html-template/user_profile_settings.html">
+        <div class="post edit-company">
+            <div class="post-header">
+                <h2>User Professional Profile</h2>
+                <a class="edit-link" href="user_profile_settings.html">[Edit]</a><a class="company-openings" href="#">View my profile</a>
+            </div>
+            <!-- .post-header -->
+            <ul>
+                <li class="settings-field">
+                    <img class="user-avatar" src="images/user-avatar.png" alt="" />
+                    <input name="User name" required placeholder="User name" type="text" />
+                    <input type="text" id="firstname" name="firstname" required placeholder="Enter your First Name...">
+
+                    <input type="text" id="lastname" name="lastname" required placeholder="Enter your Last Name...">
+
+                    <input type="text" id="fathername" name="fathername" required placeholder="Enter your Father Name...">
+
+
+                    <input type="text" id="CNIC" name="CNIC" required placeholder="Enter your CNIC.">
+                    <input type="text" id="DOB" name="DOB" required placeholder="Enter your Date of Birth.">
+
+
+                    <div id="contacts">
+                        <input name="phone" required type="text" placeholder="Contact Number" />
+                        <input name="phone" type="text" placeholder="Mobile Number" />
+                        <input name="email" required type="email" placeholder="Email Address" />
+
+                    </div>
+                </li>
+                <!-- .settings-field -->
+                <li class="settings-field">
+                    <input name="resume" required type="file" />
+                    <p class="info"><span class="required">*</span> You can upload resume in pdf</p>
+                </li>
+
+                <!-- .settings-field -->
+            </ul>
+        </div>
+        <!-- .post -->
+
+
+        <input type="submit" value="Next" />
+        <input type="submit" value="Save" />
+        <input type="reset" value="Cancel" />
+    </form>
+    <!-- form -->
+</div>
+

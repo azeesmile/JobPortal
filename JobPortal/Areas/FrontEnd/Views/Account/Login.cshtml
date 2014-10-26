@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_AccountLayout.cshtml";
+}
+
+<div class="post" style="margin-top:-112px">
+    <div class="post-header">
+        <h2>Sign in</h2>
+    </div>
+    <!-- .post-header -->
+    <form class="login-form clearfix" method="post" action="@Url.Action("CheckLogin", "Account")">
+        <input required name="email" type="email" />
+        <input required name="password" type="password" />
+        <a href="reset_password.html">Forgot Password?</a>
+        <input type="submit" value="Sign in" />
+    </form>
+    <div style="color:red">@ViewBag.Message</div>
+    <!-- .login-form -->
+    <div class="post-footer">
+
+        <p>Don't have an account yet? <a href="@Url.Action("SignUp", "Account")"><span>Sign Up</span></a></p>
+    </div>
+    <!-- .post-footer -->
+</div>
+<!-- .post -->

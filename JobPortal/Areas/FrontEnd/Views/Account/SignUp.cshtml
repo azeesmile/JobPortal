@@ -1,0 +1,33 @@
+﻿@model Project.Models.Login
+@{
+    ViewBag.Title = "SignUp";
+    Layout = "~/Views/Shared/_AccountLayout.cshtml";
+}
+
+<div class="post" style="margin-top:-112px">
+    <div class="post-header">
+        <h2>Sign up</h2>
+    </div>
+    <!-- .post-header -->
+    <form class="login-form clearfix" method="post" action="">
+        <input required name="email" type="email" />
+        <input required name="password" type="password" />
+        <input required name="confirm_password" type="password" />
+        <label>
+            <input type="radio" name="empCom" value=0 checked class="dark" />Employee
+        </label><br />
+        <label>
+            <input type="radio" name="empCom" value=1 class="dark" />Company
+        </label><br /><br />
+        <input type="submit" value="Sign up" />
+        <div class="clear"></div>
+</form>
+    <div style="color:red"><b>@ViewBag.Message</b></div>
+    <!-- .login-form -->
+    <div class="post-footer">
+        <p>Already have an account?<a href="@Url.Action("Login", "Account")"><b>Sign In</b></a></p>
+        
+    </div>
+    <!-- .post-footer -->
+</div>
+<!-- .post -->

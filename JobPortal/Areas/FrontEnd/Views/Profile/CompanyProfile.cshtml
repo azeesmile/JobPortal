@@ -1,0 +1,66 @@
+﻿@model Project.Models.Company
+
+@{
+    ViewBag.Title = "CompanyProfile";
+    Layout = "~/Views/Shared/_ProfileLayout.cshtml";
+}
+
+<div class="content">
+    <form method="post" action="/Profile/SaveProfile">
+        <div class="post edit-company">
+            <div class="post-header">
+                <h2>Edit details</h2>
+                <a class="edit-link" href="company_profile_settings.html">[Edit]</a>
+            </div>
+            <!-- .post-header -->
+            <ul>
+                <li class="settings-field">
+                    
+                    <img class="company-logo" src="images/company-logo.png" alt="" />
+                    @Html.TextBoxFor(m => m.Company_name, @Model.Company_name, new { placeholder = "Company Name", required = "required " })
+                    @*<input name="Company_name" required placeholder="Company name" type="text" value="@Model.Company_name"/>*@
+                    @Html.TextBoxFor(m => m.CEO, @Model.CEO, new { placeholder = "CEO", required = "required " })
+                    @*<input name="CEO" required placeholder="Company CEO" type="text" value="@Model.CEO" />*@
+                    @Html.TextBoxFor(m => m.CEO, @Model.CEO, new { placeholder = "Company Registeration Number" })
+                    @*<input name="companyRegistrationNo" required placeholder="Company Registeration Number" type="text" />*@
+                </li>
+                <!-- .settings-field -->
+                <li class="settings-field">
+                    @Html.TextBoxFor(m => m.Company_Address, @Model.Company_Address, new { placeholder = "Address", required = "required " })
+                    @*<textarea name="Company_Address" required placeholder="Address">@Model.Company_Address</textarea><br>*@
+                    <input name="Branch" placeholder="Branch name" type="text" />
+
+                </li>
+                <!-- .settings-field -->
+                <li class="settings-field">
+                    <textarea name="Company_Description" rows="3" required placeholder="Details description">@Model.Company_Description</textarea>
+                </li>
+                <!-- .settings-field -->
+                <li class="settings-field">
+                    <input name="employees" required placeholder="Number of employees" type="text" />
+                </li>
+
+
+                <!-- .settings-field -->
+                <li id="contacts" class="settings-field">
+                    <input name="Company_Fax" type="text" required placeholder="Fax Number" value="@Model.Company_Fax" />
+                    <input name="Company_Contact" type="text" required placeholder="Contact " />
+                    <input name="Company_Email_id" type="email" required placeholder="email" value="@Session["Email"]" readonly style="margin-right:0px"/>
+                    <input name="Company_Website" type="text" required placeholder="website" value="@Model.Company_Website" />
+
+                </li>
+                <!-- .settings-field -->
+                <li class="settings-field">
+                    @*<input name="video" type="file" placeholder="video" /> <p class="info"><span class="required">*</span> You can upload your video</p>*@
+                    <input name="banner" type="file" placeholder="banner" /> <p class="info"><span class="required"></span> You can upload your company banner</p>
+                </li>
+                <!-- .settings-field -->
+            </ul>
+        </div>
+        <!-- .post edit-company -->
+        <input type="submit" value="save" />
+        <input type="reset" value="cancel" />
+    </form>
+    <!-- form -->
+</div>
+

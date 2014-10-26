@@ -1,0 +1,99 @@
+﻿@{
+    ViewBag.Title = "AddOpening";
+}
+
+    <div class="content">
+        <div class="warning">
+            <div class="warning-img"></div>
+            <p>
+                <span>Warning!</span><br>
+                Available only to registered companies. Create a profile of the company and get the opportunity to job posting.
+            </p>
+            <div class="close-btn"></div>
+        </div>
+        <!-- .warning -->
+        <form method="post" action="http://bestwebholding.com/demo_theme/opening-job-board-html-template/add_opening.html">
+            <div class="post add-opening">
+                <div class="post-header">
+                    <h2>Opening details</h2>
+                </div>
+                <!-- .post-header -->
+                <ul>
+                    <li class="settings-field">
+                        <input name="opening" required="" type="text" placeholder="Opening">
+                        <label class="dark-label dark-radio" id="dark-0">
+                            <div class="dark dark-radio" id="dark-0" style="background-position: -112px -18px;"></div><input class="dark" name="filter" type="radio" id="dark-0" style="display: none; background-position: -112px -18px;">
+                            Full-time
+                        </label>
+                        <label class="dark-label dark-radio" id="dark-1">
+                            <div class="dark dark-radio" id="dark-1" style="background-position: -112px -18px;"></div><input class="dark" name="filter" type="radio" id="dark-1" style="display: none; background-position: -112px -18px;">
+                            Contract
+                        </label>
+                        <label class="dark-label dark-radio checked" id="dark-2">
+                            <div class="dark dark-radio" id="dark-2" style="background-position: -167px -20px;"></div><input class="dark" checked="" name="filter" type="radio" id="dark-2" style="display: none; background-position: -167px -20px;">
+                            Freelance
+                        </label>
+                    </li>
+                    <!-- .settings-field -->
+                    <li class="settings-field">
+                        <textarea name="responsibilities" required="" placeholder="Responsibilities"></textarea>
+                    </li>
+                    <!-- .settings-field -->
+                    <li class="settings-field">
+                        <textarea name="experience" rows="3" required="" placeholder="Experience"></textarea>
+                    </li>
+                    <!-- .settings-field -->
+                    <li class="settings-field">
+                        <input name="conditions" required="" type="text" placeholder="Conditions">
+                    </li>
+                    <!-- .settings-field -->
+                    <li class="settings-field">
+                        <input name="location" required="" type="text" placeholder="Location">
+                    </li>
+                    <!-- .settings-field -->
+                    <li id="contacts" class="settings-field">
+                        <input name="email" required="" type="email" placeholder="cv@envato.com">
+                        <input name="phone" required="" type="text" placeholder="+1 (555) 333 - 55 - 33">
+                    </li>
+                    <!-- .settings-field -->
+                </ul>
+                <div class="post-footer"><a class="edit-link" href="#">[Edit]</a></div>
+                <!-- .post-footer -->
+            </div>
+            <input type="submit" value="save">
+            <input type="reset" value="cancel">
+        </form>
+        <!-- search form -->
+    </div>
+    <!-- .content -->
+    <aside class="sidebar">
+        <div class="widget">
+            <h3>Text widget</h3>
+            <p>Proin at risus augue. Proin sapien est, convallis vitae ligula vitae, fermentum viverra erat.</p>
+        </div>
+        <!-- .widget -->
+        <div class="widget company-widget">
+            <h3>My company profile</h3>
+            <div class="company-meta">
+                <img src="images/featured-company.png" alt="Company">
+                <div class="count">21</div>
+                <p class="company-location">New York</p>
+                <a class="company-link" href="http://envato.com/">http://envato.com/</a>
+                <p class="description">Our company is constantly developing, we provide high_quality web and mobile applications and websites for companies from all over the world.</p>
+            </div>
+            <!-- .company-meta -->
+            <div class="contacts">
+                <ul class="phones">
+                    <li>+1 (555) 333 - 55 - 33</li>
+                    <li>+1 (000) 777 - 66 - 77</li>
+                </ul>
+                <ul class="emails">
+                    <li>cv@envato.com</li>
+                    <li>info@envato.com</li>
+                </ul>
+            </div>
+            <!-- .contacts -->
+        </div>
+        <!-- .company-widget -->
+    </aside>
+    <!-- .sidebar -->
