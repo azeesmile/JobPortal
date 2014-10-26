@@ -24,8 +24,8 @@ namespace JobPortal.Models
         public int Id { get; set; }
         public string Tool_Technology_Name { get; set; }
         public string Hands_on_Experience { get; set; }
-        public int FK_Cadidate_id { get; set; }
+        public int FK_Candidate_id { get; set; }
 
-        public virtual Cadidate Cadidate { get; set; }
+        public virtual Candidate Candidate { get; set; }
     }
 }

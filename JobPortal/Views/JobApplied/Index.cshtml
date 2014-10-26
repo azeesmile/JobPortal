@@ -1,0 +1,52 @@
+﻿@model IEnumerable<JobPortal.Models.Applied_Job>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/WebsiteViews/_AccountLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Applied_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FK_Candidate_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FK_Job_id)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Applied_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FK_Candidate_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FK_Job_id)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

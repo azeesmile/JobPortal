@@ -162,9 +162,17 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AreaController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JobAppliedController.cs" />
+    <Compile Include="Controllers\JobController.cs" />
+    <Compile Include="Controllers\JobShiftsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PositionsController.cs" />
     <Compile Include="Controllers\RolesAdminController.cs" />
+    <Compile Include="Controllers\SalaryRangeController.cs" />
     <Compile Include="Controllers\UserAdminController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -173,7 +181,7 @@
     <Compile Include="Models\AdminViewModel.cs" />
     <Compile Include="Models\Applied_Job.cs" />
     <Compile Include="Models\Area.cs" />
-    <Compile Include="Models\Cadidate.cs" />
+    <Compile Include="Models\Candidate.cs" />
     <Compile Include="Models\Candidates_Address.cs" />
     <Compile Include="Models\Candidates_Education.cs" />
     <Compile Include="Models\Candidates_Hobbies.cs" />
@@ -238,6 +246,8 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\script.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Errors\404.html" />
+    <Content Include="Views\Errors\500.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -298,6 +308,49 @@
     <Content Include="Views\Home\JobsIn.cshtml" />
     <Content Include="Views\Home\JobPage.cshtml" />
     <Content Include="Views\Home\JobsList.cshtml" />
+    <Content Include="Views\Company\Create.cshtml" />
+    <Content Include="Views\Company\Delete.cshtml" />
+    <Content Include="Views\Company\Details.cshtml" />
+    <Content Include="Views\Company\Edit.cshtml" />
+    <Content Include="Views\Company\Index.cshtml" />
+    <Content Include="Views\Shared\WebsiteViews\Partial\_AdminMenuPartialView.cshtml" />
+    <Content Include="Views\JobShifts\Create.cshtml" />
+    <Content Include="Views\JobShifts\Delete.cshtml" />
+    <Content Include="Views\JobShifts\Details.cshtml" />
+    <Content Include="Views\JobShifts\Edit.cshtml" />
+    <Content Include="Views\JobShifts\Index.cshtml" />
+    <Content Include="Views\Positions\Create.cshtml" />
+    <Content Include="Views\Positions\Delete.cshtml" />
+    <Content Include="Views\Positions\Details.cshtml" />
+    <Content Include="Views\Positions\Edit.cshtml" />
+    <Content Include="Views\Positions\Index.cshtml" />
+    <Content Include="Views\Area\Create.cshtml" />
+    <Content Include="Views\Area\Delete.cshtml" />
+    <Content Include="Views\Area\Details.cshtml" />
+    <Content Include="Views\Area\Edit.cshtml" />
+    <Content Include="Views\Area\Index.cshtml" />
+    <Content Include="Views\Category\Create.cshtml" />
+    <Content Include="Views\Category\Delete.cshtml" />
+    <Content Include="Views\Category\Details.cshtml" />
+    <Content Include="Views\Category\Edit.cshtml" />
+    <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="Views\SalaryRange\Create.cshtml" />
+    <Content Include="Views\SalaryRange\Delete.cshtml" />
+    <Content Include="Views\SalaryRange\Details.cshtml" />
+    <Content Include="Views\SalaryRange\Edit.cshtml" />
+    <Content Include="Views\SalaryRange\Index.cshtml" />
+    <Content Include="Views\Shared\WebsiteViews\Partial\_CandidateMenuPartialView.cshtml" />
+    <Content Include="Views\Shared\WebsiteViews\Partial\_EmployerMenuPartialView.cshtml" />
+    <Content Include="Views\JobApplied\Create.cshtml" />
+    <Content Include="Views\JobApplied\Delete.cshtml" />
+    <Content Include="Views\JobApplied\Details.cshtml" />
+    <Content Include="Views\JobApplied\Edit.cshtml" />
+    <Content Include="Views\JobApplied\Index.cshtml" />
+    <Content Include="Views\Job\Create.cshtml" />
+    <Content Include="Views\Job\Delete.cshtml" />
+    <Content Include="Views\Job\Details.cshtml" />
+    <Content Include="Views\Job\Edit.cshtml" />
+    <Content Include="Views\Job\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

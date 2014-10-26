@@ -26,7 +26,7 @@ namespace JobPortal.Models
         public Nullable<bool> Status { get; set; }
         public Nullable<int> FK_Candidate_id { get; set; }
         public Nullable<int> FK_Job_id { get; set; }
-        public virtual Cadidate Cadidate { get; set; }
+        public virtual Candidate Candidate { get; set; }
         public virtual Job Job { get; set; }
     }
 }

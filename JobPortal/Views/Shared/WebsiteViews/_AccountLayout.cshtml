@@ -1,20 +1,70 @@
 ﻿<!DOCTYPE html>
-
+<!--[if IE 7]><html class = "ie7"><![endif]-->
+<!--[if IE 8]><html class = "ie8"><![endif]-->
+<!--[if IE 9]><html class = "ie9"><![endif]-->
+<!--[if !(IE 7) | !(IE 8) | !(IE 9) ]><!-->
 <html>
+<!--<![endif]-->
 <head>
     <title>@ViewBag.Title</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    @Styles.Render("~/FrontEnd/Content/css")
-    @Scripts.Render("~/FrontEnd/bundles/jquery")
+    @Styles.Render("~/Website/Content/css")
+    @Scripts.Render("~/Website/bundles/jquery")
     <!--[if IE]><script src="js/html5.js"></script><link rel="stylesheet" type="text/css" href="css/ie.css"><![endif]-->
 </head>
+<body>
+    <div class="wrapper with-slider version2">
+        <header>
+            <div class="site-header">
+                @Html.Partial("~/Views/Shared/WebsiteViews/Partial/sitetitle.cshtml")
+                <!-- .site-title -->
+                @if (User.IsInRole("Candidate"))
+                {
+                    @Html.Partial("~/Views/Shared/WebsiteViews/Partial/_CandidateMenuPartialView.cshtml")
+                    @Html.Partial("~/Views/Shared/_LoginPartial.cshtml")
+                }
+                else if (User.IsInRole("Employer"))
+                {
+                    @Html.Partial("~/Views/Shared/WebsiteViews/Partial/_EmployerMenuPartialView.cshtml")
+                    @Html.Partial("~/Views/Shared/_LoginPartial.cshtml")
+                }
+                else if (User.IsInRole("Admin"))
+                {
+                    @Html.Partial("~/Views/Shared/WebsiteViews/Partial/_AdminMenuPartialView.cshtml")
+                    @Html.Partial("~/Views/Shared/_LoginPartial.cshtml")
+                }
+                <!-- .site-nav -->
+                
+                <!-- .user-area -->
+            </div>
+            <!-- .site-header -->
+        </header>
+        <!-- header -->
+        <!-- slider -->
+        @RenderSection("slider", required: false)
+        <!-- slider-end -->
 
-<body class="login">
-    <div class="wrapper login-wrapper">
-        @RenderBody()
+        <div class="main clearfix">
+            @RenderBody()
+            <!-- .content -->
+            <!-- .sidebar -->
+        </div>
+        <!-- .main -->
+        <footer>
+            <div class="site-footer">
+                @Html.Partial("~/Views/Shared/WebsiteViews/Partial/sitetitle.cshtml")
+                <!-- .site-title -->
+                @Html.Partial("~/Views/Shared/WebsiteViews/Partial/footer-nav.cshtml")
+                <!-- .site-nav -->
+                @Html.Partial("~/Views/Shared/WebsiteViews/Partial/sociallinks.cshtml")
+                <!-- .links -->
+            </div>
+            <!-- .site-footer -->
+        </footer>
+        <!-- footer -->
     </div>
-    @Scripts.Render("~/FrontEnd/bundles/scripts")
+    <!-- .wrapper -->
+    @Scripts.Render("~/Website/bundles/scripts")
+    @RenderSection("Scripts",required:false)
 </body>
 </html>
-
-

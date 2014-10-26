@@ -30,6 +30,7 @@ namespace JobPortal.Models
         public string Gender { get; set; }
         public System.DateTime Start_Date { get; set; }
         public System.DateTime End_Date { get; set; }
+        public System.DateTime CreatedAt { get; set; }
         public int Position_Code { get; set; }
         public int Category_Code { get; set; }
         public int Area_Code { get; set; }

@@ -1,0 +1,51 @@
+﻿@model JobPortal.Models.Applied_Job
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/WebsiteViews/_AccountLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Applied_Job</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Applied_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Applied_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FK_Candidate_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FK_Candidate_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FK_Job_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FK_Job_id)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

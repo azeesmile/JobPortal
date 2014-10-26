@@ -1,13 +1,167 @@
 ﻿@{
     ViewBag.Title = "Home Page";
-    Layout = "~/Views/Shared/WebsiteViews/_HomeLayout.cshtml";
+    Layout = "~/Views/Shared/WebsiteViews/_AccountLayout.cshtml";
 }
 
 @section slider {
     @Html.Partial("~/Areas/FrontEnd/Views/Partial/slider.cshtml")
 }
-
-<div class="search-wrapper">
+@if (User.IsInRole("Admin"))
+{
+    
+}
+else if (User.IsInRole("Employer"))
+{
+    <img class="opening-header no-image" src="images/opening-header.jpg" alt="">
+    <div class="content">
+      <div class="post about">
+        <div class="post-header">
+          <h2>About</h2>
+          <a class="edit-link" href="company_profile_settings.html">[Edit]</a><a class="company-openings" href="opening.html">Show company openings</a></div>
+        <!-- .post-header -->
+        <table>
+          <tbody><tr>
+            <th>Location</th>
+            <td>New York, USA</td>
+          </tr>
+          <tr>
+            <th>Number of employees</th>
+            <td>25 - 50</td>
+          </tr>
+          <tr>
+            <th>Description</th>
+            <td><p>BestWebSoft is a professional web development company consisted of senior web developers who are focused on providing solutions for businesses worldwide.</p>
+              <p>We can create a unique and attractive website for you, we take a pride in doing things right from start to finish, no matter how large or complex the project is. It is important for us to make sure every client knows that we can help in case of any problem.</p>
+              <p>We have a plenty of ideas and possibilities to implement any demand. This is determined by high qualification and extensive experience of our employees in web development area, and the fact that such work will help to demonstrate our creative potential.</p></td>
+          </tr>
+        </tbody></table>
+      </div>
+      <!-- .post about -->
+      <div class="post">
+        <div class="post-header">
+          <p class="results"><span>5</span> of <span>62</span> opening(-s) by <span>Envato</span></p>
+          <label class="sort">Sort:
+            <select id="select-0" style="display: none;">
+              <option>By date</option>
+              <option>By name</option>
+            </select><div class="select" id="select-0"><div class="select-header" id="select-0"><p>By date</p></div><ul class="opt-list" id="select-0" style="display: none;"><li class="option">By date</li><li class="option">By name</li></ul></div>
+          </label>
+          <!-- .sort -->
+        </div>
+        <!-- .post-header -->
+        <div class="table-wrapper">
+          <table class="openings">
+            <tbody><tr class="opening">
+              <td class="opening-logo"><div class="star"></div>
+                <a href="opening.html"><img src="images/opening-logo.png" alt="Logo"></a></td>
+              <td class="opening-meta"><h2><a href="opening.html" class="opening-name">Senior Graphic Designer</a></h2>
+                <h3><a href="company_profile.html" class="company">BestWebSoft</a></h3></td>
+              <td class="opening-type"><p class="freelance">Freelance</p></td>
+              <td class="opening-location"><p><a href="#">New York</a></p></td>
+            </tr>
+            <!-- .opening -->
+            <tr class="opening">
+              <td class="opening-logo"><div class="star star-checked"></div>
+                <a href="opening.html"><img src="images/opening-logo.png" alt="Logo"></a></td>
+              <td class="opening-meta"><h2><a href="opening.html" class="opening-name">Web Developer</a></h2>
+                <h3><a href="company_profile.html" class="company">BestWebSoft</a></h3></td>
+              <td class="opening-type"><p class="full-time">Full-time</p></td>
+              <td class="opening-location"><p><a href="#">Washington</a></p></td>
+            </tr>
+            <!-- .opening -->
+            <tr class="opening">
+              <td class="opening-logo"><div class="star"></div>
+                <a href="opening.html"><img src="images/opening-logo.png" alt="Logo"></a></td>
+              <td class="opening-meta"><h2><a href="opening.html" class="opening-name">UX Designer</a></h2>
+                <h3><a href="company_profile.html" class="company">BestWebSoft</a></h3></td>
+              <td class="opening-type"><p class="contract">Contract</p></td>
+              <td class="opening-location"><p><a href="#">Los Angeles</a></p></td>
+            </tr>
+            <!-- .opening -->
+            <tr class="opening">
+              <td class="opening-logo"><div class="star"></div>
+                <a href="opening.html"><img src="images/opening-logo.png" alt="Logo"></a></td>
+              <td class="opening-meta"><h2><a href="opening.html" class="opening-name">Product Manager</a></h2>
+                <h3><a href="company_profile.html" class="company">BestWebSoft</a></h3></td>
+              <td class="opening-type"><p class="freelance">Freelance</p></td>
+              <td class="opening-location"><p><a href="#">Miami</a></p></td>
+            </tr>
+            <!-- .opening -->
+            <tr class="opening">
+              <td class="opening-logo"><div class="star"></div>
+                <a href="opening.html"><img src="images/opening-logo.png" alt="Logo"></a></td>
+              <td class="opening-meta"><h2><a href="opening.html" class="opening-name">ROR Developer</a></h2>
+                <h3><a href="company_profile.html" class="company">BestWebSoft</a></h3></td>
+              <td class="opening-type"><p class="freelance">Freelance</p></td>
+              <td class="opening-location"><p><a href="#">London</a></p></td>
+            </tr>
+            <!-- .opening -->
+          </tbody><div class="opening-loader"></div></table>
+          <!-- .openings -->
+        </div>
+      </div>
+      <!-- .post openings -->
+      <nav class="paging">
+        <ul>
+          <li class="neighbour"><a href="home_v.1.html">Prev</a></li>
+          <li class="current"><a href="home_v.1.html">1</a></li>
+          <li><a href="home_v.1.html">2</a></li>
+          <li><a href="home_v.1.html">3</a></li>
+          <li><span class="dots">...</span></li>
+          <li><a href="home_v.1.html">10</a></li>
+          <li><a href="home_v.1.html">11</a></li>
+          <li><a href="home_v.1.html">12</a></li>
+          <li class="neighbour"><a href="home_v.1.html">Next</a></li>
+        </ul>
+      </nav>
+      <!-- .paging -->
+    </div>
+    <!-- .content -->
+    <aside class="sidebar">
+      <div class="widget add-opening">
+        <button>Add opening</button>
+        <div class="plus">+</div>
+      </div>
+      <!-- .add-opening -->
+      <div class="widget company-widget">
+        <h3>BestWebSoft</h3>
+        <div class="company-meta"><img src="images/featured-company.png" alt="Company">
+          <div class="count">21</div>
+          <p class="company-location">New York</p>
+          <a class="company-link" href="http://bestwebsoft.com/">http://bestwebsoft.com/</a>
+          <p class="description">Our company is constantly developing, we provide high_quality web and mobile applications and websites for companies from all over the world.</p>
+        </div>
+        <!-- .company-meta -->
+        <div class="contacts">
+          <ul class="phones">
+            <li>+1 (555) 333 - 55 - 33</li>
+            <li>+1 (000) 777 - 66 - 77</li>
+          </ul>
+          <ul class="emails">
+            <li>envato@bestwebsoft.com</li>
+            <li>info@envato.com</li>
+          </ul>
+        </div>
+        <!-- .contacts -->
+      </div>
+      <!-- .company-widget -->
+      <div class="widget video">
+        <iframe width="242" height="151" src="http://www.youtube.com/embed/H1pWTxVVc2E?list=UU5L2rnrf7WCd8GaqsZvnJOw" frameborder="0" allowfullscreen=""></iframe>
+        <p class="video-title">Video title usage example</p>
+      </div>
+      <!-- .video -->
+      <div class="widget newsletter">
+        <h3>Newsletter</h3>
+        <input name="email" type="email">
+        <p class="info"><span class="required">*</span> You will get a notification email</p>
+      </div>
+      <!-- .newsletter -->
+    </aside>
+    <!-- .sidebar -->
+}
+else
+{
+  <div class="search-wrapper">
     <form class="opening-search" method="post" action="http://bestwebholding.com/demo_theme/opening-job-board-html-template/home_v.2.html">
         <div class="search-top clearfix">
             <div class="search-field">
@@ -225,3 +379,5 @@
     <!-- .video -->
 </aside>
 <!-- .sidebar -->
+}
+

@@ -30,7 +30,7 @@ namespace JobPortal.Models
         public string Company_name { get; set; }
         public string Company_Contact { get; set; }
         public string Company_Email_id { get; set; }
-        public byte[] Company_Logo { get; set; }
+        public string Company_Logo { get; set; }
         public string Company_Website { get; set; }
         public string Company_Fax { get; set; }
         public string Company_Description { get; set; }

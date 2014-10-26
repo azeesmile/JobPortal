@@ -107,6 +107,7 @@ namespace JobPortal.Models
     {
         protected override void Seed(ApplicationDbContext context) {
             InitializeIdentityForEF(context);
+            SeedData(context);
             base.Seed(context);
         }
 
@@ -137,6 +138,70 @@ namespace JobPortal.Models
             if (!rolesForUser.Contains(role.Name)) {
                 var result = userManager.AddToRole(user.Id, role.Name);
             }
+        }
+
+        public static void SeedData(ApplicationDbContext context)
+        {
+            context.Roles.Add(new IdentityRole("Employer"));
+            context.Roles.Add(new IdentityRole("Candidate"));
+
+            context.Job_Shifts.Add(new Job_Shifts() {Job_Shift = "Morning Shift"});
+            context.Job_Shifts.Add(new Job_Shifts() {Job_Shift = "Evening Shift"});
+            context.Job_Shifts.Add(new Job_Shifts() {Job_Shift = "Night Shift"});
+
+            context.Positions.Add(new Position() {Position_Name = "Web Developer"});
+            context.Positions.Add(new Position() {Position_Name = "Web Designer"});
+            context.Positions.Add(new Position() {Position_Name = "Graphic Designer"});
+            context.Positions.Add(new Position() {Position_Name = "Graphic Artist"});
+            context.Positions.Add(new Position() {Position_Name = "Software Engineer"});
+            context.Positions.Add(new Position() {Position_Name = "Senior Software Engineer"});
+            context.Positions.Add(new Position() {Position_Name = "Priciple Software Engineer"});
+            context.Positions.Add(new Position() {Position_Name = "Assistant Project Manager"});
+            context.Positions.Add(new Position() { Position_Name = "Project Manager" });
+            context.Positions.Add(new Position() {Position_Name = "Vice President"});
+
+            context.Areas.Add(new Area() {Area_Name = "Lahore"});
+            context.Areas.Add(new Area() {Area_Name = "Karachi"});
+            context.Areas.Add(new Area() {Area_Name = "Islamabad"});
+            context.Areas.Add(new Area() {Area_Name = "Patoki"});
+            context.Areas.Add(new Area() {Area_Name = "Gujrawala"});
+
+            context.Categories.Add(new Category() {Category_Name = "Information Technology"});
+            context.Categories.Add(new Category() {Category_Name = "Administration"});
+            context.Categories.Add(new Category() {Category_Name = "Research and Development"});
+            context.Categories.Add(new Category() {Category_Name = "Accounts, Finance & Financial Services"});
+            context.Categories.Add(new Category() {Category_Name = "Computer Networking"});
+            context.Categories.Add(new Category() {Category_Name = "Education, Training & Development"});
+            context.Categories.Add(new Category() {Category_Name = "Retail"});
+            context.Categories.Add(new Category() {Category_Name = "Engineering"});
+            context.Categories.Add(new Category() {Category_Name = "Database Administration (DBA)"});
+            context.Categories.Add(new Category() {Category_Name = "Manufacturing"});
+            context.Categories.Add(new Category() {Category_Name = "Health & Medicine"});
+            context.Categories.Add(new Category() {Category_Name = "Import & Export"});
+            context.Categories.Add(new Category() {Category_Name = "Quality Control"});
+            context.Categories.Add(new Category() {Category_Name = "Security"});
+            context.Categories.Add(new Category() {Category_Name = "Hotel/Restaurant Management"});
+            context.Categories.Add(new Category() {Category_Name = "Sales & Business Development"});
+            context.Categories.Add(new Category() {Category_Name = "Writer"});
+            context.Categories.Add(new Category() {Category_Name = "Human Resources"});
+            context.Categories.Add(new Category() {Category_Name = "Quality Assurance (QA)"});
+            context.Categories.Add(new Category() {Category_Name = "Project Management"});
+            context.Categories.Add(new Category() {Category_Name = "Intern"});
+            context.Categories.Add(new Category() {Category_Name = "Hardware"});
+
+            context.Salaries_Range.Add(new Salaries_Range() {Salary_Range = "5,000"});
+            context.Salaries_Range.Add(new Salaries_Range() {Salary_Range = "10,000"});
+            context.Salaries_Range.Add(new Salaries_Range() {Salary_Range = "20,000"});
+            context.Salaries_Range.Add(new Salaries_Range() {Salary_Range = "30,000"});
+            context.Salaries_Range.Add(new Salaries_Range() {Salary_Range = "40,000"});
+            context.Salaries_Range.Add(new Salaries_Range() {Salary_Range = "50,000"});
+            context.Salaries_Range.Add(new Salaries_Range() {Salary_Range = "60,000"});
+            context.Salaries_Range.Add(new Salaries_Range() {Salary_Range = "70,000"});
+            context.Salaries_Range.Add(new Salaries_Range() {Salary_Range = "80,000"});
+            context.Salaries_Range.Add(new Salaries_Range() {Salary_Range = "90,000"});
+            context.Salaries_Range.Add(new Salaries_Range() {Salary_Range = "100,000"});
+
+            context.SaveChanges();
         }
     }
 

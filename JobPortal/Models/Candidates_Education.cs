@@ -28,6 +28,6 @@ namespace JobPortal.Models
         public string Division_CGPA { get; set; }
         public int FK_Candidate_id { get; set; }
     
-        public virtual Cadidate Cadidate { get; set; }
+        public virtual Candidate Candidate { get; set; }
     }
 }

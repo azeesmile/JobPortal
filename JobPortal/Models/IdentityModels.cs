@@ -31,7 +31,7 @@ namespace JobPortal.Models
 
         public DbSet<Applied_Job> Applied_Job { get; set; }
         public DbSet<Area> Areas { get; set; }
-        public DbSet<Cadidate> Cadidates { get; set; }
+        public DbSet<Candidate> Candidates { get; set; }
         public DbSet<Candidates_Address> Candidates_Address { get; set; }
         public DbSet<Candidates_Education> Candidates_Education { get; set; }
         public DbSet<Candidates_Hobbies> Candidates_Hobbies { get; set; }
