@@ -20,6 +20,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -231,8 +233,34 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\appstore-btn.png" />
+    <Content Include="Images\avatar.png" />
+    <Content Include="Images\company-logo.png" />
+    <Content Include="Images\contacts-email.png" />
+    <Content Include="Images\contacts-phone.png" />
+    <Content Include="Images\dropdown.png" />
+    <Content Include="Images\email.png" />
+    <Content Include="Images\featured-company.png" />
+    <Content Include="Images\link.png" />
+    <Content Include="Images\loadinfo.net.gif" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\mail-bg.png" />
+    <Content Include="Images\no-results.png" />
+    <Content Include="Images\opening-header.jpg" />
+    <Content Include="Images\opening-location.png" />
+    <Content Include="Images\opening-logo.png" />
+    <Content Include="Images\password.png" />
+    <Content Include="Images\slide-phone.png" />
+    <Content Include="Images\slide-search-results.png" />
+    <Content Include="Images\slide1.jpg" />
+    <Content Include="Images\slide2.jpg" />
+    <Content Include="Images\slide3.jpg" />
+    <Content Include="Images\sprites.png" />
+    <Content Include="Images\user-avatar.png" />
+    <Content Include="Images\video.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Images\Thumbs.db" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -351,6 +379,7 @@
     <Content Include="Views\Job\Details.cshtml" />
     <Content Include="Views\Job\Edit.cshtml" />
     <Content Include="Views\Job\Index.cshtml" />
+    <Content Include="Views\Shared\_SignInLayout.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -388,6 +417,7 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
