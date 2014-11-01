@@ -172,7 +172,7 @@ header a {
     padding: 5px 0 7px;
     position: absolute;
     top: 90px;
-    left: -6px;
+    left: 180px;
     z-index: 100;
 }
 
@@ -180,7 +180,7 @@ header a {
         display: block;
         color: #999;
         padding: 10px 20px;
-        width: 100px;
+        width: 40px;
     }
 
         .user-options a:hover {
@@ -199,7 +199,7 @@ header a {
         content: '';
         position: absolute;
         top: -11px;
-        left: 20px;
+        left: 40px;
         width: 0;
         height: 0;
         z-index: 10;
@@ -212,7 +212,7 @@ header a {
         content: '';
         position: absolute;
         top: -11px;
-        left: 21px;
+        left: 40px;
         width: 0;
         height: 0;
         z-index: 9;
