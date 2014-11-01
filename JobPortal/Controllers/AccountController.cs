@@ -135,9 +135,9 @@ namespace JobPortal.Controllers
         //
         // GET: /Account/Register
         [AllowAnonymous]
-        public ActionResult Register()
+        public PartialViewResult Register()
         {
-            return View();
+            return PartialView();
         }
 
         //
@@ -145,7 +145,7 @@ namespace JobPortal.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Register(RegisterViewModel model)
+        public async Task<PartialViewResult> Register(RegisterViewModel model)
         {
             if (ModelState.IsValid)
             {
@@ -157,13 +157,13 @@ namespace JobPortal.Controllers
                     var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking this link: <a href=\"" + callbackUrl + "\">link</a>");
                     ViewBag.Link = callbackUrl;
-                    return View("DisplayEmail");
+                    return PartialView("DisplayEmail");
                 }
                 AddErrors(result);
             }
 
             // If we got this far, something failed, redisplay form
-            return View(model);
+            return PartialView(model);
         }
 
         //

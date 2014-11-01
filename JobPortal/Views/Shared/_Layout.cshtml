@@ -1,49 +1,177 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
+
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+    <title>Homepage - Careers</title>
+
+    <!-- Stylesheets -->
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Condensed:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="~/Content/frontend/css/bootstrap.css">
+    <link rel="stylesheet" href="~/Content/frontend/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Content/frontend/css/flexslider.css">
+    <link rel="stylesheet" href="~/Content/frontend/css/style.css">
+    <link rel="stylesheet" href="~/Content/frontend/css/responsive.css">
+
+    <!--[if IE 9]>
+        <script src="js/media.match.min.js"></script>
+    <![endif]-->
+    
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", null, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
 
-                    @if (Request.IsAuthenticated && User.IsInRole("Admin")) {
-                        <li>@Html.ActionLink("RolesAdmin", "Index", "RolesAdmin")</li>
-                        <li>@Html.ActionLink("UsersAdmin", "Index", "UsersAdmin")</li>
-                    }
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+<body class="loaded">
+    <div id="main-wrapper">
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+        <header id="header" class="header-style-1">
+            <div class="header-top-bar">
+                <div class="container">
+                @if(User.Identity.IsAuthenticated)
+                {
+                    @Html.Partial("_LoginPartial")                    
+                }
+                else
+                {
+                    <!-- Header Register -->
+                @Html.Partial("~/Views/Account/Register.cshtml")
+                    <!-- end .header-register -->
+                    <!-- Header Login -->
+                @Html.Partial("~/Views/Account/Login.cshtml")
+                    <!-- end .header-login -->
+                }
+                </div> <!-- end .container -->
+            </div> <!-- end .header-top-bar -->
+
+            <div class="header-nav-bar">
+                <div class="container">
+
+                    <!-- Logo -->
+                    <div class="css-table logo">
+                        <div class="css-table-cell">
+                            <a href="index.html">
+                                <img src="~/Content/frontend/img/header-logo.png" alt="">
+                            </a> <!-- end .logo -->
+                        </div>
+                    </div>
+
+                    <!-- Mobile Menu Toggle -->
+                    <a href="#" id="mobile-menu-toggle"><span></span></a>
+
+                    <!-- Primary Nav -->
+                    <nav>
+                        @Html.Partial("~/Views/Shared/Partial/_NavigationPartialView.cshtml")
+                    </nav>
+                </div> <!-- end .container -->
+
+                <div id="mobile-menu-container" class="container">
+                    <div class="login-register"><a href="#" class="btn btn-link clone btn-default mobile-login-toggle">Login</a><a href="#" class="btn btn-link clone btn-default mobile-register-toggle">Register</a></div>
+                    <div class="menu"></div>
+                </div>
+            </div> <!-- end .header-nav-bar -->
+            @Html.Partial("~/Views/Shared/Partial/_SearchBarPartialView.cshtml")
+            <!-- end .header-search-bar -->
+            @Html.Partial("~/Views/Shared/Partial/_SearchBannerPartialView.cshtml")
+            <!-- end .header-banner -->
+        </header> <!-- end #header -->
+
+        <div id="page-content">
+            <div class="container">
+                <div class="row">
+                    <!-- end .page-content -->
+                    @RenderBody()
+                    <!-- end .page-sidebar -->
+                </div>
+            </div> <!-- end .container -->
+
+            @Html.Partial("~/Views/Shared/Partial/_SuccessStoriesPartialView.cshtml")
+        </div> <!-- end #page-content -->
+
+        <footer id="footer">
+            @Html.Partial("~/Views/Shared/Partial/_FooterContainerPartialView.cshtml")
+
+            <div class="copyright">
+                <div class="container">
+                    <p>© Copyright 2014 <a href="#">Careers</a> | All Rights Reserved | Powered by <a href="#">Talmeez</a></p>
+
+                    <ul class="footer-social">
+                        <li><a href="#" class="fa fa-facebook"></a></li>
+                        <li><a href="#" class="fa fa-twitter"></a></li>
+                        <li><a href="#" class="fa fa-linkedin"></a></li>
+                        <li><a href="#" class="fa fa-google-plus"></a></li>
+                        <li><a href="#" class="fa fa-pinterest"></a></li>
+                        <li><a href="#" class="fa fa-dribbble"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer> <!-- end #footer -->
+
+    </div> <!-- end #main-wrapper -->
+    <!-- Scripts -->
+    <script src="~/Content/frontend/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+    <script src="~/Scripts/frontend/js/maplace.min.js"></script>
+    <script src="~/Scripts/frontend/js/jquery.ba-outside-events.min.js"></script>
+    <script src="~/Scripts/frontend/js/jquery.responsive-tabs.js"></script>
+    <script src="~/Scripts/frontend/js/jquery.flexslider-min.js"></script>
+    <script src="~/Scripts/frontend/js/jquery.fitvids.js"></script>
+    <script src="~/Scripts/frontend/js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="~/Scripts/frontend/js/jquery.inview.min.js"></script>
+    <script src="~/Scripts/frontend/js/script.js"></script>
+
+
 </body>
 </html>
+
+
+@*
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@ViewBag.Title - My ASP.NET Application</title>
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Application name", "Index", "Home", null, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+
+                        @if (Request.IsAuthenticated && User.IsInRole("Admin")) {
+                            <li>@Html.ActionLink("RolesAdmin", "Index", "RolesAdmin")</li>
+                            <li>@Html.ActionLink("UsersAdmin", "Index", "UsersAdmin")</li>
+                        }
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </body>
+    </html>*@
