@@ -1,13 +1,115 @@
 ﻿@{
     ViewBag.Title = "About";
-    Layout = "~/Views/Shared/WebsiteViews/_HomeLayout.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<hgroup>
-    <h2>@ViewBag.Title.</h2>
-    <h3>@ViewBag.Message</h3>
-</hgroup>
-<div class="row-fluid">
-    <div class="span12">
-        <p>Use this area to provide additional information.</p>
+<header id="header" class="header-style-1">
+    <div class="header-page-title">
+        <div class="container">
+            <h1>About Us</h1>
+
+            <ul class="breadcrumbs">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </div>
     </div>
+</header>
+<div id="page-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 page-content">
+                <div class="white-container mb0">
+                    <div class="title-lines">
+                        <h3 class="mt15">Hello, nice to meet you!</h3>
+                    </div>
+
+                    <p><strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, consectetur, neque, aliquid officia quibusdam quidem facere ipsum aperiam quod aliquam nemo totam. Sunt, nostrum adipisci dicta suscipit vitae perspiciatis repellat.</strong></p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, animi iusto sit ipsum quae nobis nostrum fuga laboriosam ab nesciunt aliquam inventore odio alias accusantium maiores hic voluptate similique sed assumenda suscipit molestiae soluta necessitatibus ipsa non debitis excepturi eius.</p>
+
+                    <div class="fitvidsjs">
+                        <div class="fluid-width-video-wrapper" style="padding-top: 56.2%;"><iframe src="//player.vimeo.com/video/24456787" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" id="fitvid573296"></iframe></div>
+                    </div>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, consequatur, ratione itaque totam ea blanditiis eius odit at sapiente cum numquam illo. Eligendi, natus, nihil, nemo, voluptates atque quo illum deleniti earum magni optio cupiditate nobis labore fuga vero voluptatem sed autem quasi culpa tempore suscipit delectus reprehenderit animi dolores!</p>
+
+                    <h3 class="bottom-line">Our Team</h3>
+
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4">
+                            <div class="our-team-item">
+                                <div class="img">
+                                    <img src="~/Content/frontend/img/content/face-0.png" alt="">
+                                </div>
+
+                                <h6>John Doe <span>CEO</span></h6>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4">
+                            <div class="our-team-item">
+                                <div class="img">
+                                    <img src="~/Content/frontend/img/content/face-2.png" alt="">
+                                </div>
+
+                                <h6>John Doe <span>CEO</span></h6>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4">
+                            <div class="our-team-item">
+                                <div class="img">
+                                    <img src="~/Content/frontend/img/content/face-4.png" alt="">
+                                </div>
+
+                                <h6>John Doe <span>CEO</span></h6>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4">
+                            <div class="our-team-item">
+                                <div class="img">
+                                    <img src="~/Content/frontend/img/content/face-6.png" alt="">
+                                </div>
+
+                                <h6>John Doe <span>CEO</span></h6>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4">
+                            <div class="our-team-item">
+                                <div class="img">
+                                    <img src="~/Content/frontend/img/content/face-8.png" alt="">
+                                </div>
+
+                                <h6>John Doe <span>CEO</span></h6>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4">
+                            <div class="our-team-item">
+                                <div class="img">
+                                    <img src="~/Content/frontend/img/content/face-9.png" alt="">
+                                </div>
+
+                                <h6>John Doe <span>CEO</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 page-sidebar">
+                <aside>
+                    <div class="widget sidebar-widget white-container links-widget">
+                        <ul>
+                            <li class="active">@*<a href="about-us.html">About Us</a>*@@Html.ActionLink("About Us", "About", "Home")</li>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="terms-conditions.html">Terms &amp; Conditions</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div> <!-- end .container -->
 </div>

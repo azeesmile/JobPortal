@@ -10,6 +10,7 @@ namespace JobPortal.Controllers
             return View();
         }
 
+        [AllowAnonymous]
         public ActionResult About()
         {
             ViewBag.Message = "Your app description page.";

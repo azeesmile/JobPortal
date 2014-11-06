@@ -1,6 +1,7 @@
 ﻿<ul class="primary-nav">
     <li class="active has-submenu">
-        <a href="index.html">Home</a>
+        @*<a href="index.html">Home</a>*@
+        @Html.ActionLink("Home", "Index", "Home")
         <ul>
             <li><a href="index.html">Home with Boxes</a></li>
             <li><a href="homepage-slider.html">Home with Slider</a></li>
@@ -25,7 +26,8 @@
         <span class="submenu-arrow"></span>
     </li>
     <li class="has-submenu">
-        <a href="about-us.html">About Us</a>
+        @*<a href="about-us.html">About Us</a>*@
+        @Html.ActionLink("About Us", "About", "Home")
         <ul>
             <li><a href="partners.html">Partners</a></li>
             <li><a href="contact-us.html">Contact Us</a></li>
