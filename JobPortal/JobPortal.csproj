@@ -177,7 +177,7 @@
     <Compile Include="Controllers\RolesAdminController.cs" />
     <Compile Include="Controllers\SalaryRangeController.cs" />
     <Compile Include="Controllers\UserAdminController.cs" />
-    <Compile Include="ExtensionMethods\HelpersExtension.cs" />
+    <Compile Include="ExtensionMethods\HtmlHelperExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

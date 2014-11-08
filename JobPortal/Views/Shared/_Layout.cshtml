@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using JobPortal.ExtensionMethods
+<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -72,11 +73,16 @@
                     <div class="login-register"><a href="#" class="btn btn-link clone btn-default mobile-login-toggle">Login</a><a href="#" class="btn btn-link clone btn-default mobile-register-toggle">Register</a></div>
                     <div class="menu"></div>
                 </div>
-            @RenderSection("header", required: false)
+                @RenderSection("header", required: false)
             </div> <!-- end .header-nav-bar -->
-            @Html.Partial("~/Views/Shared/Partial/_SearchBarPartialView.cshtml")
+            @if (HtmlHelperExtensions.IsCurrentControllerAndAction("Home", "Index", ViewContext) ||
+                HtmlHelperExtensions.IsCurrentControllerAndAction("Home", "JobsList", ViewContext))
+            {
+                @Html.Partial("~/Views/Shared/Partial/_SearchBarPartialView.cshtml")
+            }
             <!-- end .header-search-bar -->
-            @if (!Request.IsAuthenticated)
+            @if (!Request.IsAuthenticated && 
+                HtmlHelperExtensions.IsCurrentControllerAndAction("Home", "Index", ViewContext))
             {
                 @Html.Partial("~/Views/Shared/Partial/_SearchBannerPartialView.cshtml")
             <!-- end .header-banner -->
