@@ -2,18 +2,22 @@
     ViewBag.Title = "About";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<header id="header" class="header-style-1">
+@section header{
+    <header id="header" class="header-style-1">
     <div class="header-page-title">
         <div class="container">
             <h1>About Us</h1>
 
             <ul class="breadcrumbs">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
+                <li>@*<a href="#">Home</a>*@@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@*<a href="#">About Us</a>*@@Html.ActionLink("About Us", "About", "Home")</li>
             </ul>
         </div>
     </div>
 </header>
+    }
+
+
 <div id="page-content">
     <div class="container">
         <div class="row">
@@ -104,8 +108,9 @@
                     <div class="widget sidebar-widget white-container links-widget">
                         <ul>
                             <li class="active">@*<a href="about-us.html">About Us</a>*@@Html.ActionLink("About Us", "About", "Home")</li>
-                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                            <li><a href="terms-conditions.html">Terms &amp; Conditions</a></li>
+                            <li>@*<a href="privacy-policy.html">Privacy Policy</a>*@@Html.ActionLink("Privacy Policy", "PrivacyPolicy", "Home")</li>
+                            <li>@*<a href="terms-conditions.html">Terms &amp; Conditions</a>*@@Html.ActionLink("Terms & Conditions", "TermsConditions", "Home")</li>
+                            <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
                         </ul>
                     </div>
                 </aside>

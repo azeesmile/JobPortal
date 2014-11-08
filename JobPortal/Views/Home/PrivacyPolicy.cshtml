@@ -1,8 +1,58 @@
 ﻿
 @{
     ViewBag.Title = "PrivacyPolicy";
-    Layout = "~/Views/Shared/WebsiteViews/_HomeLayout.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@section header{
+    <header id="header" class="header-style-1">
+        <div class="header-page-title">
+            <div class="container">
+                <h1>Privacy Policy</h1>
 
-<h2>PrivacyPolicy</h2>
+                <ul class="breadcrumbs">
+                    <li>@*<a href="#">Home</a>*@@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@*<a href="#">Privacy Policy</a>*@@Html.ActionLink("Privacy Policy", "PrivacyPolicy", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+}
+<div id="page-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 page-content">
+                <div class="white-container mb0">
+                    <div class="title-lines">
+                        <h3 class="mt15">Privacy Policy</h3>
+                    </div>
 
+                    <p><strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, consectetur, neque, aliquid officia quibusdam quidem facere ipsum aperiam quod aliquam nemo totam. Sunt, nostrum adipisci dicta suscipit vitae perspiciatis repellat.</strong></p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, animi iusto sit ipsum quae nobis nostrum fuga laboriosam ab nesciunt aliquam inventore odio alias accusantium maiores hic voluptate similique sed assumenda suscipit molestiae soluta necessitatibus ipsa non debitis excepturi eius.</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, cumque, repudiandae, commodi <a href="#">accusamus laboriosam modi deleniti autem sunt</a> corporis nemo eos reiciendis voluptatem asperiores doloremque sapiente iusto hic ex enim eum dolorum doloribus. Libero, dignissimos ut quidem ipsam atque assumenda molestias omnis quam. Rerum, fugiat, veniam cupiditate iste sint voluptatum sapiente nesciunt. Eius, aut, asperiores officia ea doloremque architecto maiores eaque. Nihil doloremque a porro asperiores architecto! Totam, quis nihil provident qui optio officia voluptate ipsa assumenda rerum fuga. Molestiae, similique optio omnis reiciendis tempore magnam deserunt voluptatem alias temporibus ut sunt necessitatibus veritatis odio saepe et. Rem, deserunt consequatur!</p>
+
+                    <h5>Sunt necessitatibus veritatis</h5>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, et mollitia dicta debitis veniam dolor est magni necessitatibus minus sit recusandae aut delectus officia. Quam, quidem suscipit aspernatur ullam totam.</p>
+
+                    <p>Lorem ipsum dolor sit amet, <strong>consectetur adipisicing elit</strong>. Asperiores, magni, fugit, deleniti beatae dicta animi fuga quis possimus minima adipisci obcaecati maxime hic blanditiis ipsa dolorem laboriosam totam in nostrum architecto recusandae odit placeat excepturi corporis sunt incidunt consequatur debitis eos distinctio quam reiciendis provident velit similique repudiandae iure eaque.</p>
+                </div>
+            </div>
+
+            <div class="col-sm-4 page-sidebar">
+                <aside>
+                    <div class="widget sidebar-widget white-container links-widget">
+                        <ul>
+                            <li>@*<a href="about-us.html">About Us</a>*@@Html.ActionLink("About Us", "About", "Home")</li>
+                            <li class="active">@*<a href="privacy-policy.html">Privacy Policy</a>*@@Html.ActionLink("Privacy Policy", "PrivacyPolicy", "Home")</li>
+                            <li>@*<a href="terms-conditions.html">Terms &amp; Conditions</a>*@@Html.ActionLink("Terms & Conditions", "TermsConditions", "Home")</li>
+                            <li>@*<a href="#">Contact Us</a>*@@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div> <!-- end .container -->
+</div>
+<!-- end #page-content -->

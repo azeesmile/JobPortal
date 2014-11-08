@@ -20,7 +20,7 @@
     <!--[if IE 9]>
         <script src="js/media.match.min.js"></script>
     <![endif]-->
-    
+
 </head>
 
 <body class="loaded">
@@ -29,23 +29,23 @@
         <header id="header" class="header-style-1">
             <div class="header-top-bar">
                 <div class="container">
-                @if(User.Identity.IsAuthenticated)
-                {
-                    @Html.Partial("_LoginPartial")                    
-                }
-                else
-                {
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        @Html.Partial("_LoginPartial")
+                    }
+                    else
+                    {
                     <!-- Header Register -->
-                @Html.Partial("~/Views/Account/Register.cshtml")
+                        @Html.Partial("~/Views/Account/Register.cshtml")
                     <!-- end .header-register -->
                     <!-- Header Login -->
-                @Html.Partial("~/Views/Account/Login.cshtml")
+                        @Html.Partial("~/Views/Account/Login.cshtml")
                     <!-- end .header-login -->
-                }
+                    }
                 </div>
-             <!-- end .container -->
+                <!-- end .container -->
             </div>
-         <!-- end .header-top-bar -->
+            <!-- end .header-top-bar -->
 
             <div class="header-nav-bar">
                 <div class="container">
@@ -72,11 +72,15 @@
                     <div class="login-register"><a href="#" class="btn btn-link clone btn-default mobile-login-toggle">Login</a><a href="#" class="btn btn-link clone btn-default mobile-register-toggle">Register</a></div>
                     <div class="menu"></div>
                 </div>
+            @RenderSection("header", required: false)
             </div> <!-- end .header-nav-bar -->
             @Html.Partial("~/Views/Shared/Partial/_SearchBarPartialView.cshtml")
             <!-- end .header-search-bar -->
-            @Html.Partial("~/Views/Shared/Partial/_SearchBannerPartialView.cshtml")
+            @if (!Request.IsAuthenticated)
+            {
+                @Html.Partial("~/Views/Shared/Partial/_SearchBannerPartialView.cshtml")
             <!-- end .header-banner -->
+            }
         </header> <!-- end #header -->
 
         <div id="page-content">
@@ -87,8 +91,7 @@
                     <!-- end .page-sidebar -->
                 </div>
             </div> <!-- end .container -->
-
-            @Html.Partial("~/Views/Shared/Partial/_SuccessStoriesPartialView.cshtml")
+            @*@Html.Partial("~/Views/Shared/Partial/_SuccessStoriesPartialView.cshtml")*@
         </div> <!-- end #page-content -->
 
         <footer id="footer">
@@ -96,7 +99,7 @@
 
             <div class="copyright">
                 <div class="container">
-                    <p>© Copyright 2014 <a href="#">Careers</a> | All Rights Reserved | Powered by <a href="#">Talmeez</a></p>
+                    <p>© Copyright 2014 @*<a href="#">Careers</a>*@@Html.ActionLink("Job on Click", "Index", "Home") | All Rights Reserved @*| Powered by <a href="#">Talmeez</a>*@</p>
 
                     <ul class="footer-social">
                         <li><a href="#" class="fa fa-facebook"></a></li>

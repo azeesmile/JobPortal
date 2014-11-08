@@ -18,6 +18,7 @@ namespace JobPortal.Controllers
             return View();
         }
 
+        [AllowAnonymous]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
@@ -25,6 +26,7 @@ namespace JobPortal.Controllers
             return View();
         }
 
+        [AllowAnonymous]
         public ActionResult PrivacyPolicy()
         {
             ViewBag.Message = "Your contact page.";
@@ -32,6 +34,27 @@ namespace JobPortal.Controllers
             return View();
         }
 
+        [AllowAnonymous]
+        public ActionResult TermsConditions()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+        [AllowAnonymous]
+        public ActionResult Candidates()
+        {
+            ViewBag.Message = "Your app description page.";
+
+            return View();
+        }
+        [AllowAnonymous]
+        public ActionResult Companies()
+        {
+            ViewBag.Message = "Your app description page.";
+
+            return View();
+        }
         public ActionResult Sitemap()
         {
             ViewBag.Message = "Your contact page.";

@@ -163,6 +163,7 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Constants\Constants.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AreaController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
@@ -176,6 +177,7 @@
     <Compile Include="Controllers\RolesAdminController.cs" />
     <Compile Include="Controllers\SalaryRangeController.cs" />
     <Compile Include="Controllers\UserAdminController.cs" />
+    <Compile Include="ExtensionMethods\HelpersExtension.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -478,6 +480,9 @@
     <Content Include="Views\Shared\Partial\_SearchBannerPartialView.cshtml" />
     <Content Include="Views\Shared\Partial\_SuccessStoriesPartialView.cshtml" />
     <Content Include="Views\Shared\Partial\_FooterContainerPartialView.cshtml" />
+    <Content Include="Views\Home\TermsConditions.cshtml" />
+    <Content Include="Views\Home\Candidates.cshtml" />
+    <Content Include="Views\Home\Companies.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

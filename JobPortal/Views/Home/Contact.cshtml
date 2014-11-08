@@ -1,21 +1,123 @@
 ﻿@{
     ViewBag.Title = "Contact";
-    Layout = "~/Views/Shared/WebsiteViews/_HomeLayout.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<hgroup>
-    <h2>@ViewBag.Title.</h2>
-    <h3>@ViewBag.Message</h3>
-</hgroup>
-<div>
-    <address>
-        One Microsoft Way<br />
-        Redmond, WA 98052-6399<br />
-        <abbr title="Phone">P:</abbr>
-        425.555.0100
-    </address>
+@section header{
+    <header id="header" class="header-style-1">
+        <div class="header-page-title">
+            <div class="container">
+                <h1>Contact Us</h1>
 
-    <address>
-        <i class="icon-envelope"></i><strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-        <i class="icon-envelope"></i><strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-    </address>
+                <ul class="breadcrumbs">
+                    <li>@*<a href="#">Home</a>*@@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@*<a href="#">Contact Us</a>*@@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+}
+
+<div id="page-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 page-content">
+                @*<div id="contact-page-map" class="white-container"></div>*@
+
+                <div class="white-container mb0">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h5 class="bottom-line mt10">Headquarters</h5>
+
+                            <address>
+                                121 King Street, Melbourne <br>
+                                Victoria 3000 Australia <br>
+                                Envato Pty Ltd
+                            </address>
+
+                            <p>
+                                Phone: <a href="tel:+11234567890">+1 123-456-7890</a> <br>
+                                Email: <a href="mailto:email@example.com">email@example.com</a>
+                            </p>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <h5 class="bottom-line mt10">Secondary Office</h5>
+
+                            <address>
+                                47 Queen Street, Melbourne <br>
+                                Victoria 3000 Australia <br>
+                                Envato Pty Ltd
+                            </address>
+
+                            <p>
+                                Phone: <a href="tel:+11234567890">+1 123-456-7890</a> <br>
+                                Email: <a href="mailto:email@example.com">email@example.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="white-container"></div>
+                <div class="widget sidebar-widget white-container contact-form-widget">
+                    <h5 class="widget-title">Send Us a Message</h5>
+
+                    <div class="widget-content">
+                        <p>Consectetur adipisicing elit. Incidunt odio in sed velit quod. Unde dolores minima quisquam libero veritatis consequuntur accusamus nemo.</p>
+
+                        <form class="mt30">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Name">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Email">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Website">
+                            </div>
+
+                            <div class="form-group">
+                                <textarea class="form-control" rows="5" placeholder="How can we help you?"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-default"><i class="fa fa-envelope-o"></i> Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 page-sidebar">
+                <aside>
+                    <div class="widget sidebar-widget white-container links-widget">
+                        <ul>
+                            <li>@*<a href="about-us.html">About Us</a>*@@Html.ActionLink("About Us", "About", "Home")</li>
+                            <li>@*<a href="privacy-policy.html">Privacy Policy</a>*@@Html.ActionLink("Privacy Policy", "PrivacyPolicy", "Home")</li>
+                            <li>@*<a href="terms-conditions.html">Terms &amp; Conditions</a>*@@Html.ActionLink("Terms & Conditions", "TermsConditions", "Home")</li>
+                            <li class="active">@*<a href="terms-conditions.html">Terms &amp; Conditions</a>*@@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div> <!-- end .container -->
 </div>
+
+
+
+@*<hgroup>
+        <h2>@ViewBag.Title.</h2>
+        <h3>@ViewBag.Message</h3>
+    </hgroup>
+    <div>
+        <address>
+            One Microsoft Way<br />
+            Redmond, WA 98052-6399<br />
+            <abbr title="Phone">P:</abbr>
+            425.555.0100
+        </address>
+
+        <address>
+            <i class="icon-envelope"></i><strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+            <i class="icon-envelope"></i><strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+        </address>
+    </div>*@

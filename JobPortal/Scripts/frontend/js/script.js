@@ -38,155 +38,155 @@ $body.on('touchstart', function() {
 
 // Style Switcher
 // ---------------------------------------------------------
-(function () {
+//(function () {
 
-	/*!
-	 * jQuery Cookie Plugin v1.4.0
-	 * https://github.com/carhartl/jquery-cookie
-	 *
-	 * Copyright 2013 Klaus Hartl
-	 * Released under the MIT license
-	 */
-	(function(a){if(typeof define==="function"&&define.amd){define(["jquery"],a)}else{if(typeof exports==="object"){a(require("jquery"))}else{a(jQuery)}}}(function(f){var a=/\+/g;function d(i){return b.raw?i:encodeURIComponent(i)}function g(i){return b.raw?i:decodeURIComponent(i)}function h(i){return d(b.json?JSON.stringify(i):String(i))}function c(i){if(i.indexOf('"')===0){i=i.slice(1,-1).replace(/\\"/g,'"').replace(/\\\\/g,"\\")}try{i=decodeURIComponent(i.replace(a," "));return b.json?JSON.parse(i):i}catch(j){}}function e(j,i){var k=b.raw?j:c(j);return f.isFunction(i)?i(k):k}var b=f.cookie=function(q,p,v){if(p!==undefined&&!f.isFunction(p)){v=f.extend({},b.defaults,v);if(typeof v.expires==="number"){var r=v.expires,u=v.expires=new Date();u.setTime(+u+r*86400000)}return(document.cookie=[d(q),"=",h(p),v.expires?"; expires="+v.expires.toUTCString():"",v.path?"; path="+v.path:"",v.domain?"; domain="+v.domain:"",v.secure?"; secure":""].join(""))}var w=q?undefined:{};var s=document.cookie?document.cookie.split("; "):[];for(var o=0,m=s.length;o<m;o++){var n=s[o].split("=");var j=g(n.shift());var k=n.join("=");if(q&&q===j){w=e(k,p);break}if(!q&&(k=e(k))!==undefined){w[j]=k}}return w};b.defaults={};f.removeCookie=function(j,i){if(f.cookie(j)===undefined){return false}f.cookie(j,"",f.extend({},i,{expires:-1}));return !f.cookie(j)}}));
-
-
-
-	// CSS Styles
-	$head.append('<link rel="stylesheet" href="css/style-switcher.css">');
+//	/*!
+//	 * jQuery Cookie Plugin v1.4.0
+//	 * https://github.com/carhartl/jquery-cookie
+//	 *
+//	 * Copyright 2013 Klaus Hartl
+//	 * Released under the MIT license
+//	 */
+//	(function(a){if(typeof define==="function"&&define.amd){define(["jquery"],a)}else{if(typeof exports==="object"){a(require("jquery"))}else{a(jQuery)}}}(function(f){var a=/\+/g;function d(i){return b.raw?i:encodeURIComponent(i)}function g(i){return b.raw?i:decodeURIComponent(i)}function h(i){return d(b.json?JSON.stringify(i):String(i))}function c(i){if(i.indexOf('"')===0){i=i.slice(1,-1).replace(/\\"/g,'"').replace(/\\\\/g,"\\")}try{i=decodeURIComponent(i.replace(a," "));return b.json?JSON.parse(i):i}catch(j){}}function e(j,i){var k=b.raw?j:c(j);return f.isFunction(i)?i(k):k}var b=f.cookie=function(q,p,v){if(p!==undefined&&!f.isFunction(p)){v=f.extend({},b.defaults,v);if(typeof v.expires==="number"){var r=v.expires,u=v.expires=new Date();u.setTime(+u+r*86400000)}return(document.cookie=[d(q),"=",h(p),v.expires?"; expires="+v.expires.toUTCString():"",v.path?"; path="+v.path:"",v.domain?"; domain="+v.domain:"",v.secure?"; secure":""].join(""))}var w=q?undefined:{};var s=document.cookie?document.cookie.split("; "):[];for(var o=0,m=s.length;o<m;o++){var n=s[o].split("=");var j=g(n.shift());var k=n.join("=");if(q&&q===j){w=e(k,p);break}if(!q&&(k=e(k))!==undefined){w[j]=k}}return w};b.defaults={};f.removeCookie=function(j,i){if(f.cookie(j)===undefined){return false}f.cookie(j,"",f.extend({},i,{expires:-1}));return !f.cookie(j)}}));
 
 
 
-	 //HTML Code
-	var $styleHTML = '<div id="style-switcher">';
-			$styleHTML += '<a href="#" class="toggle fa fa-cog"></a>';
-
-			$styleHTML += '<ul class="layout">';
-				$styleHTML += '<li class="active"><a href="#">Fluid</a></li>';
-				$styleHTML += '<li><a href="#" data-layout="boxed-layout">Boxed</a></li>';
-			$styleHTML += '</ul>';
-
-			$styleHTML += '<ul class="colors">';
-				$styleHTML += '<li class="active"><a href="#" data-color-code="2aadde"></a></li>';
-				$styleHTML += '<li><a href="#" data-color-code="99B709" data-path="css/color/green.css"></a></li>';
-				$styleHTML += '<li><a href="#" data-color-code="F6A70E" data-path="css/color/orange.css"></a></li>';
-				$styleHTML += '<li><a href="#" data-color-code="904799" data-path="css/color/violet.css"></a></li>';
-			$styleHTML += '</ul>';
-		$styleHTML += '</div>';
-
-	$body.append($styleHTML);
+//	// CSS Styles
+//	$head.append('<link rel="stylesheet" href="css/style-switcher.css">');
 
 
 
-	var $switcher = $('#style-switcher'),
-		$colors = $switcher.find('.colors > li > a'),
-		$layout = $switcher.find('.layout > li > a'),
-		has_color = false;
+//	 //HTML Code
+//	var $styleHTML = '<div id="style-switcher">';
+//			$styleHTML += '<a href="#" class="toggle fa fa-cog"></a>';
+
+//			$styleHTML += '<ul class="layout">';
+//				$styleHTML += '<li class="active"><a href="#">Fluid</a></li>';
+//				$styleHTML += '<li><a href="#" data-layout="boxed-layout">Boxed</a></li>';
+//			$styleHTML += '</ul>';
+
+//			$styleHTML += '<ul class="colors">';
+//				$styleHTML += '<li class="active"><a href="#" data-color-code="2aadde"></a></li>';
+//				$styleHTML += '<li><a href="#" data-color-code="99B709" data-path="css/color/green.css"></a></li>';
+//				$styleHTML += '<li><a href="#" data-color-code="F6A70E" data-path="css/color/orange.css"></a></li>';
+//				$styleHTML += '<li><a href="#" data-color-code="904799" data-path="css/color/violet.css"></a></li>';
+//			$styleHTML += '</ul>';
+//		$styleHTML += '</div>';
+
+//	$body.append($styleHTML);
 
 
 
-	// Onload Cookie Check
-	var color_cookie = $.cookie('style-switcher-color');
-	var layout_cookie = $.cookie('style-switcher-layout');
-	var toggle_cookie = $.cookie('style-switcher-toggle');
-
-	if (color_cookie) {
-		$head.append('<link id="style-switcher-css" rel="stylesheet" href="' + color_cookie + '">');
-		has_color = true;
-		$('a[data-path="' + color_cookie + '"]').parent('li').addClass('active').siblings('li').removeClass('active');
-	}
-
-	if (layout_cookie) {
-		$body.addClass(layout_cookie);
-		$('a[data-layout="' + layout_cookie + '"]').parent('li').addClass('active').siblings('li').removeClass('active');
-	}
-
-	if (!toggle_cookie) {
-		$switcher.addClass('active');
-	}
+//	var $switcher = $('#style-switcher'),
+//		$colors = $switcher.find('.colors > li > a'),
+//		$layout = $switcher.find('.layout > li > a'),
+//		has_color = false;
 
 
 
-	// Toggle
-	$switcher.find('.toggle').on('click', function (event) {
-		event.preventDefault();
+//	// Onload Cookie Check
+//	var color_cookie = $.cookie('style-switcher-color');
+//	var layout_cookie = $.cookie('style-switcher-layout');
+//	var toggle_cookie = $.cookie('style-switcher-toggle');
 
-		if (!$switcher.hasClass('active')) {
-			$switcher.addClass('active');
-			$.removeCookie('style-switcher-toggle', { path: '/' });
-		} else {
-			$switcher.removeClass('active');
-			$.cookie('style-switcher-toggle', 'hidden', { path: '/', expires: 365 });
-		}
-	});
+//	if (color_cookie) {
+//		$head.append('<link id="style-switcher-css" rel="stylesheet" href="' + color_cookie + '">');
+//		has_color = true;
+//		$('a[data-path="' + color_cookie + '"]').parent('li').addClass('active').siblings('li').removeClass('active');
+//	}
 
+//	if (layout_cookie) {
+//		$body.addClass(layout_cookie);
+//		$('a[data-layout="' + layout_cookie + '"]').parent('li').addClass('active').siblings('li').removeClass('active');
+//	}
 
-
-	// Buttons Colors
-	$colors.each(function () {
-		var $this = $(this);
-
-		$this.css('background-color', '#' + $this.data('color-code'));
-	});
+//	if (!toggle_cookie) {
+//		$switcher.addClass('active');
+//	}
 
 
 
-	// Colors Toggle
-	$colors.on('click', function (event) {
-		event.preventDefault();
+//	// Toggle
+//	$switcher.find('.toggle').on('click', function (event) {
+//		event.preventDefault();
 
-		var $this = $(this),
-			$parent = $this.parent('li');
-
-		if (!$parent.hasClass('active')) {
-			var path = $this.data('path');
-
-			if (!path) {
-				$('#style-switcher-css').remove();
-				has_color = false;
-				$.removeCookie('style-switcher-color', { path: '/' });
-			} else if (has_color == false) {
-				$head.append('<link id="style-switcher-css" rel="stylesheet" href="' + path + '">');
-				has_color = true;
-				$.cookie('style-switcher-color', path, { path: '/', expires: 1 });
-			} else {
-				$('#style-switcher-css').attr('href', path);
-				$.cookie('style-switcher-color', path, { path: '/', expires: 1 });
-			}
-
-			$parent.addClass('active').siblings('li').removeClass('active');
-		}
-	});
+//		if (!$switcher.hasClass('active')) {
+//			$switcher.addClass('active');
+//			$.removeCookie('style-switcher-toggle', { path: '/' });
+//		} else {
+//			$switcher.removeClass('active');
+//			$.cookie('style-switcher-toggle', 'hidden', { path: '/', expires: 365 });
+//		}
+//	});
 
 
 
-	// Layout Toggle
-	$layout.on('click', function (event) {
-		event.preventDefault();
+//	// Buttons Colors
+//	$colors.each(function () {
+//		var $this = $(this);
 
-		var $this = $(this),
-			$parent = $this.parent('li');
+//		$this.css('background-color', '#' + $this.data('color-code'));
+//	});
 
-		if (!$parent.hasClass('active')) {
-			var layout = $this.data('layout');
 
-			if (!layout) {
-				$.removeCookie('style-switcher-layout', { path: '/' });
-			} else {
-				$body.addClass(layout);
-				$.cookie('style-switcher-layout', layout, { path: '/', expires: 1 });
-			}
 
-			$parent.addClass('active').siblings('li').removeClass('active').children('a').each(function () {
-				var this_layout = $(this).data('layout');
+//	// Colors Toggle
+//	$colors.on('click', function (event) {
+//		event.preventDefault();
 
-				if (this_layout && $body.hasClass(this_layout)) {
-					$body.removeClass(this_layout);
-				}
-			});
-		}
-	});
+//		var $this = $(this),
+//			$parent = $this.parent('li');
 
-})();
+//		if (!$parent.hasClass('active')) {
+//			var path = $this.data('path');
+
+//			if (!path) {
+//				$('#style-switcher-css').remove();
+//				has_color = false;
+//				$.removeCookie('style-switcher-color', { path: '/' });
+//			} else if (has_color == false) {
+//				$head.append('<link id="style-switcher-css" rel="stylesheet" href="' + path + '">');
+//				has_color = true;
+//				$.cookie('style-switcher-color', path, { path: '/', expires: 1 });
+//			} else {
+//				$('#style-switcher-css').attr('href', path);
+//				$.cookie('style-switcher-color', path, { path: '/', expires: 1 });
+//			}
+
+//			$parent.addClass('active').siblings('li').removeClass('active');
+//		}
+//	});
+
+
+
+//	// Layout Toggle
+//	$layout.on('click', function (event) {
+//		event.preventDefault();
+
+//		var $this = $(this),
+//			$parent = $this.parent('li');
+
+//		if (!$parent.hasClass('active')) {
+//			var layout = $this.data('layout');
+
+//			if (!layout) {
+//				$.removeCookie('style-switcher-layout', { path: '/' });
+//			} else {
+//				$body.addClass(layout);
+//				$.cookie('style-switcher-layout', layout, { path: '/', expires: 1 });
+//			}
+
+//			$parent.addClass('active').siblings('li').removeClass('active').children('a').each(function () {
+//				var this_layout = $(this).data('layout');
+
+//				if (this_layout && $body.hasClass(this_layout)) {
+//					$body.removeClass(this_layout);
+//				}
+//			});
+//		}
+//	});
+
+//})();
 
 
 
