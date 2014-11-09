@@ -174,6 +174,7 @@
     <Compile Include="Controllers\JobShiftsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PositionsController.cs" />
+    <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\RolesAdminController.cs" />
     <Compile Include="Controllers\SalaryRangeController.cs" />
     <Compile Include="Controllers\UserAdminController.cs" />
@@ -483,6 +484,10 @@
     <Content Include="Views\Home\TermsConditions.cshtml" />
     <Content Include="Views\Home\Candidates.cshtml" />
     <Content Include="Views\Home\Companies.cshtml" />
+    <Content Include="Views\Register\Employee.cshtml" />
+    <Content Include="Views\Register\Recruiter.cshtml" />
+    <Content Include="Views\Register\EmployeeAcademic.cshtml" />
+    <Content Include="Views\Register\EmployeeProfessional.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

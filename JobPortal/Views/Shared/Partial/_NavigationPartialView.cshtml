@@ -1,14 +1,14 @@
 ﻿<ul class="primary-nav">
     @*<li class="active has-submenu">*@
-        @*<a href="index.html">Home</a>*@
+    @*<a href="index.html">Home</a>*@
 
-       <li>@Html.ActionLink("Home", "Index", "Home")</li>
-        @*<ul>
-            <li><a href="index.html">Home with Boxes</a></li>
-            <li><a href="homepage-slider.html">Home with Slider</a></li>
-        </ul>
-        <span class="submenu-arrow"></span>
-    </li>*@
+    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+    @*<ul>
+                <li><a href="index.html">Home with Boxes</a></li>
+                <li><a href="homepage-slider.html">Home with Slider</a></li>
+            </ul>
+            <span class="submenu-arrow"></span>
+        </li>*@
     <li class="has-submenu">
         <a href="jobs.html">Jobs</a>
         <ul>
@@ -20,24 +20,34 @@
     <li>@Html.ActionLink("Candidates", "Candidates", "Home")</li>
     <li>@Html.ActionLink("Companies", "Companies", "Home")</li>
     @*<li class="has-submenu">
-        <a href="candidates.html">Candidates</a>
+            <a href="candidates.html">Candidates</a>
+            <ul>
+                <li><a href="candidates.html">Candidates Listings</a></li>
+                <li><a href="candidates-sidebar.html">Candidates Listings Sidebar</a></li>
+                <li><a href="candidates-single.html">Candidates Details</a></li>
+            </ul>
+            <span class="submenu-arrow"></span>
+        </li>*@
+    <li class="has-submenu">
+        @*<a href="about-us.html">About Us</a>*@
+        @Html.ActionLink("About Us", "About", "Home")
         <ul>
-            <li><a href="candidates.html">Candidates Listings</a></li>
-            <li><a href="candidates-sidebar.html">Candidates Listings Sidebar</a></li>
-            <li><a href="candidates-single.html">Candidates Details</a></li>
+            @*<li><a href="partners.html">Partners</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>*@
+            <li>@*<a href="privacy-policy.html">Privacy Policy</a>*@@Html.ActionLink("Privacy Policy", "PrivacyPolicy", "Home")</li>
+            <li>@*<a href="terms-conditions.html">Terms &amp; Conditions</a>*@@Html.ActionLink("Terms & Conditions", "TermsConditions", "Home")</li>
+            <li>@*<a href="terms-conditions.html">Terms &amp; Conditions</a>*@@Html.ActionLink("Contact Us", "Contact", "Home")</li>
         </ul>
         <span class="submenu-arrow"></span>
-    </li>*@
-    @*<li class="has-submenu">
-        <a href="about-us.html">About Us</a>*@
-
-       <li>@Html.ActionLink("About Us", "About", "Home")</li>
-        @*<ul>
-            <li><a href="partners.html">Partners</a></li>
-            <li><a href="contact-us.html">Contact Us</a></li>
+    </li>
+    @*<li><a href="register.html">Register</a>*@
+    <li class="has-submenu">
+        @Html.ActionLink("Register", "Register", "Account")
+        <ul>
+            <li>@Html.ActionLink("Employee", "Employee", "Register")</li>
+            <li>@Html.ActionLink("Recruiter", "Recruiter", "Register")</li>
         </ul>
         <span class="submenu-arrow"></span>
-    </li>*@
-    <li>@*<a href="register.html">Register</a>*@<li>@Html.ActionLink("Register", "Register", "Account")</li>
+    </li>
     @*<li><a href="shortcodes.html">Shortcodes</a></li>*@
 </ul>
