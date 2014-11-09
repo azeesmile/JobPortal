@@ -1,0 +1,193 @@
+﻿@{
+    ViewBag.Title = "EmployeeProfessional";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section header{
+    <header id="header" class="header-style-1">
+        <div class="header-page-title">
+            <div class="container">
+                <h1>Employee</h1>
+
+                <ul class="breadcrumbs">
+                    <li>@*<a href="#">Home</a>*@@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@*<a href="#">Sign Up</a>*@@Html.ActionLink("Professional", "EmployeeProfessional", "Register")</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+}
+<div id="page-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 page-content">
+                <div class="white-container mb0">
+                    <ul class="form-steps four clearfix">
+                        <li class="completed">Step 1</li>
+                        <li class="completed">Step 2</li>
+                        <li class="completed">Step 3</li>
+                        <li class="active">Step 4</li>
+                    </ul>
+
+                    <div class="white-container sign-up-form">
+                        <div>
+                            <h2>Professional</h2>
+
+                            @*<section>
+                                    <h6 class="bottom-line">You are:</h6>
+
+                                    <div class="radio-inline">
+                                        <label><input type="radio"> Employee</label>
+                                    </div>
+
+                                    <div class="radio-inline">
+                                        <label><input type="radio"> Recruiter</label>
+                                    </div>
+                                </section>*@
+
+                            <section>
+
+                                <h6 class="label">Matriculation</h6>
+
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" placeholder="Obtained Marks">
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" placeholder="Total Marks">
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" placeholder="Subjects">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" placeholder="Institute">
+                                    </div>
+                                </div>
+
+                                <h6 class="label">Date of Birth</h6>
+
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <input type="text" class="month-input" placeholder="MM">
+                                        <input type="text" class="day-input" placeholder="DD">
+                                        <input type="text" class="year-input" placeholder="YYYY">
+                                s    </div>
+                                </div>
+
+                                <h6 class="label">Phone</h6>
+
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" placeholder="Mobile">
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" placeholder="Work">
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" placeholder="Fax">
+                                    </div>
+                                </div>
+
+                                <h6 class="label">Address</h6>
+
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" placeholder="Address 1">
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" placeholder="Address 2">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <select>
+                                            <option value="">Country</option>
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                            <option value="">4</option>
+                                            <option value="">5</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                        <select>
+                                            <option value="">State/Province</option>
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                            <option value="">4</option>
+                                            <option value="">5</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" placeholder="City">
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" placeholder="ZIP Code">
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section>
+                                <h6 class="bottom-line">Expected Salary:</h6>
+
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="range-slider clearfix">
+                                            <div class="slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" data-min="100" data-max="100000" data-current-min="500" data-current-max="50000" aria-disabled="false"><div class="ui-slider-range ui-widget-header ui-corner-all" style="left: 0.4004004004004%; width: 49.5495495495496%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 0.4004004004004%;"></a><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 49.94994994995%;"></a></div>
+                                            <div class="first-value">$ <span>500</span></div>
+                                            <div class="last-value">$ <span>50000</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section>
+                                <h6 class="bottom-line">Set Password:</h6>
+
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <input type="password" class="form-control" placeholder="Password">
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <input type="password" class="form-control" placeholder="Repeat Password">
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+
+                        <hr class="mt60">
+
+                        <div class="clearfix">
+                            <a href="#" class="btn btn-default btn-large pull-right">Save</a>
+                        </div>
+                    </div>
+                </div> <!-- end .page-content -->
+            </div>
+            <div class="col-sm-4 page-sidebar">
+                <aside>
+                    <div class="widget sidebar-widget white-container links-widget">
+                        <ul>
+                            <li>@*<a href="about-us.html">About Us</a>*@@Html.ActionLink("Personal", "Employee", "Register")</li>
+                            <li>@*<a href="privacy-policy.html">Privacy Policy</a>*@@Html.ActionLink("Academic", "EmployeeAcademic", "Register")</li>
+                            <li class="active">@*<a href="terms-conditions.html">Terms &amp; Conditions</a>*@@Html.ActionLink("Professional", "EmployeeProfessional", "Register")</li>
+                            <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div> <!-- end .container -->
+    </div>
+</div>

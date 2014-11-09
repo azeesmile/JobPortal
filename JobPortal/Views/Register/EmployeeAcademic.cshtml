@@ -1,0 +1,162 @@
+﻿
+@{
+    ViewBag.Title = "EmployeeAcademic";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section header{
+    <header id="header" class="header-style-1">
+        <div class="header-page-title">
+            <div class="container">
+                <h1>Employee</h1>
+
+                <ul class="breadcrumbs">
+                    <li>@*<a href="#">Home</a>*@@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@*<a href="#">Sign Up</a>*@@Html.ActionLink("Academic", "EmployeeAcademic", "Register")</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+}
+<div id="page-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 page-content">
+                <div class="white-container mb0">
+                    <ul class="form-steps four clearfix">
+                        <li class="completed">Step 1</li>
+                        <li class="completed">Step 2</li>
+                        <li class="active">Step 3</li>
+                        <li>Step 4</li>
+                    </ul>
+
+                    <div class="white-container sign-up-form">
+                        <div>
+                            <h2>Academic</h2>
+
+                            @*<section>
+                                <h6 class="bottom-line">You are:</h6>
+
+                                <div class="radio-inline">
+                                    <label><input type="radio"> Employee</label>
+                                </div>
+
+                                <div class="radio-inline">
+                                    <label><input type="radio"> Recruiter</label>
+                                </div>
+                            </section>*@
+
+                            <section>
+                               
+                                <h6 class="label">Matriculation</h6>
+
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" placeholder="Obtained Marks">
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" placeholder="Total Marks">
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" placeholder="Subjects">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" placeholder="Institute">
+                                    </div>
+                                </div>
+
+                                <h6 class="label">Intermediate</h6>
+
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" placeholder="Obtained Marks">
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" placeholder="Total Marks">
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" placeholder="Subjects">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" placeholder="Institute">
+                                    </div>
+                                </div>
+
+                                <h6 class="label">Graduation</h6>
+
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" placeholder="Obtained Marks">
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" placeholder="Total Marks/CGPA">
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" placeholder="Subjects/CGPA">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" placeholder="Institute">
+                                    </div>
+                                </div>
+
+                                <h6 class="label">Post Graduation</h6>
+
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" placeholder="Obtained Marks/CGPA">
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" placeholder="Total Marks/CGPA">
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" placeholder="Subjects">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" placeholder="Institute">
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+
+                        <hr class="mt60">
+
+                        <div class="clearfix">
+                            <a href="#" class="btn btn-default btn-large pull-right">Continue to Step 3</a>
+                        </div>
+                    </div>
+                </div> <!-- end .page-content -->
+            </div>
+            <div class="col-sm-4 page-sidebar">
+                <aside>
+                    <div class="widget sidebar-widget white-container links-widget">
+                        <ul>
+                            <li>@*<a href="about-us.html">About Us</a>*@@Html.ActionLink("Personal", "Employee", "Register")</li>
+                            <li class="active">@*<a href="privacy-policy.html">Privacy Policy</a>*@@Html.ActionLink("Academic", "EmployeeAcademic", "Register")</li>
+                            <li>@*<a href="terms-conditions.html">Terms &amp; Conditions</a>*@@Html.ActionLink("Professional", "EmployeeProfessional", "Register")</li>
+                            <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div> <!-- end .container -->
+    </div>
+</div>
