@@ -488,6 +488,7 @@
     <Content Include="Views\Register\Recruiter.cshtml" />
     <Content Include="Views\Register\EmployeeAcademic.cshtml" />
     <Content Include="Views\Register\EmployeeProfessional.cshtml" />
+    <Content Include="Views\Shared\Partial\_StaticPageSideBarPartial.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

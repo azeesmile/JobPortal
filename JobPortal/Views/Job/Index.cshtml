@@ -1,63 +1,74 @@
-﻿@model IEnumerable<JobPortal.Models.Job>
+﻿@model IEnumerable<jobportal.models.job>
 
-@{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/WebsiteViews/_AccountLayout.cshtml";
-}
+    @{
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/WebsiteViews/_AccountLayout.cshtml";
+    }
 
-<h2>Index</h2>
+    <h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.No_of_Post)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Gender)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Start_Date)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.End_Date)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Position_Code)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Category_Code)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Area_Code)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Job_Shift_Code)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Salary_Range_Code)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Experience_Ind)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Education_Req)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Job_Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Job_Post_Status)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FK_Company_id)
-        </th>
-        <th></th>
-    </tr>
+@*@foreach (var item in Model) {
+    <div class="jobs-item with-thumb">
+        <div class="thumb"><img src="img/content/bus-00.png" alt=""></div>
+        <div class="clearfix visible-xs"></div>
+        <div class="date">@Html.DisplayFor(modelItem => item.Start_Date)<span>@Html.DisplayFor(modelItem => item.Start_Date)</span></div>
+        <h6 class="title"><a href="#">@Html.DisplayFor(modelItem => item.Position_Code)</a></h6>
+        <span class="meta">@Html.DisplayFor(modelItem => item.Area_Code)</span>
+        <p class="description">@Html.DisplayFor(modelItem => item.Job_Description)@Html.ActionLink("Read More", "Details", new { id = item.Id })</p>
+    </div>
+}*@
 
-@foreach (var item in Model) {
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.No_of_Post)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Start_Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.End_Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Position_Code)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category_Code)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Area_Code)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Job_Shift_Code)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salary_Range_Code)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Experience_Ind)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Education_Req)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Job_Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Job_Post_Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FK_Company_id)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model) {
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.No_of_Post)
@@ -109,4 +120,4 @@
     </tr>
 }
 
-</table>
+    </table>

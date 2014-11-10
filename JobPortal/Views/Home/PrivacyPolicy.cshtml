@@ -63,18 +63,7 @@ However, non-personally identifiable visitor information may be provided to othe
                 </div>
             </div>
 
-            <div class="col-sm-4 page-sidebar">
-                <aside>
-                    <div class="widget sidebar-widget white-container links-widget">
-                        <ul>
-                            <li>@*<a href="about-us.html">About Us</a>*@@Html.ActionLink("About Us", "About", "Home")</li>
-                            <li class="active">@*<a href="privacy-policy.html">Privacy Policy</a>*@@Html.ActionLink("Privacy Policy", "PrivacyPolicy", "Home")</li>
-                            <li>@*<a href="terms-conditions.html">Terms &amp; Conditions</a>*@@Html.ActionLink("Terms & Conditions", "TermsConditions", "Home")</li>
-                            <li>@*<a href="#">Contact Us</a>*@@Html.ActionLink("Contact Us", "Contact", "Home")</li>
-                        </ul>
-                    </div>
-                </aside>
-            </div>
+            @Html.Partial("~/Views/Shared/Partial/_StaticPageSideBarPartial.cshtml")
         </div>
     </div> <!-- end .container -->
 </div>
