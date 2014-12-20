@@ -232,6 +232,8 @@
     <Content Include="Content\FEImages\user-avatar.png" />
     <Content Include="Content\FEImages\video.html" />
     <Content Include="Content\frontend\ajax\libs\jquery\1.11.0\jquery.min.js" />
+    <Content Include="Content\frontend\css\Accountbootstrap.css" />
+    <Content Include="Content\frontend\css\AccountStyle.css" />
     <Content Include="Content\frontend\css\bootstrap.css" />
     <Content Include="Content\frontend\css\flexslider.css" />
     <Content Include="Content\frontend\css\font-awesome.min.css" />
@@ -418,7 +420,6 @@
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Shared\WebsiteViews\_ProfileLayout.cshtml" />
     <Content Include="Views\Shared\WebsiteViews\_HomeLayout.cshtml" />
-    <Content Include="Views\Shared\WebsiteViews\_AccountLayout.cshtml" />
     <Content Include="Views\Shared\WebsiteViews\Partial\footer-nav.cshtml" />
     <Content Include="Views\Shared\WebsiteViews\Partial\sitenav.cshtml" />
     <Content Include="Views\Shared\WebsiteViews\Partial\sitetitle.cshtml" />
@@ -489,6 +490,8 @@
     <Content Include="Views\Register\EmployeeAcademic.cshtml" />
     <Content Include="Views\Register\EmployeeProfessional.cshtml" />
     <Content Include="Views\Shared\Partial\_StaticPageSideBarPartial.cshtml" />
+    <Content Include="Views\Shared\WebsiteViews\_LayoutAccount.cshtml" />
+    <Content Include="Views\Shared\_AccountLayout.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

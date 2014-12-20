@@ -143,7 +143,7 @@ namespace JobPortal.Models
         public static void SeedData(ApplicationDbContext context)
         {
             context.Roles.Add(new IdentityRole("Employer"));
-            context.Roles.Add(new IdentityRole("Candidate"));
+            context.Roles.Add(new IdentityRole("Employee"));
 
             context.Job_Shifts.Add(new Job_Shifts() {Job_Shift = "Morning Shift"});
             context.Job_Shifts.Add(new Job_Shifts() {Job_Shift = "Evening Shift"});

@@ -15,6 +15,7 @@ namespace JobPortal.Controllers
     [Authorize]
     public class AccountController : Controller
     {
+        
         public AccountController()
         {
         }
@@ -43,6 +44,9 @@ namespace JobPortal.Controllers
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
+            var db = new ApplicationDbContext();
+            var userRoles = db.Roles.ToList();
+            ViewBag.RoleName = userRoles;
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }
@@ -135,9 +139,11 @@ namespace JobPortal.Controllers
         //
         // GET: /Account/Register
         [AllowAnonymous]
-        public PartialViewResult Register()
+        public ActionResult Register()
         {
-            return PartialView();
+           
+            return View();
+
         }
 
         //
@@ -145,7 +151,7 @@ namespace JobPortal.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<PartialViewResult> Register(RegisterViewModel model)
+        public async Task<ActionResult> Register(RegisterViewModel model)
         {
             if (ModelState.IsValid)
             {
@@ -154,6 +160,7 @@ namespace JobPortal.Controllers
                 if (result.Succeeded)
                 {
                     var code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
+                   
                     var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking this link: <a href=\"" + callbackUrl + "\">link</a>");
                     ViewBag.Link = callbackUrl;
@@ -163,7 +170,7 @@ namespace JobPortal.Controllers
             }
 
             // If we got this far, something failed, redisplay form
-            return PartialView(model);
+            return View(model);
         }
 
         //

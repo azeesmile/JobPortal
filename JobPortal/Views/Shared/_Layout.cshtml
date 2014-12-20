@@ -37,10 +37,12 @@
                     else
                     {
                     <!-- Header Register -->
-                        @Html.Partial("~/Views/Account/Register.cshtml")
+                        @*@Html.Partial("~/Views/Account/Register.cshtml")*@
                     <!-- end .header-register -->
                     <!-- Header Login -->
-                        @Html.Partial("~/Views/Account/Login.cshtml")
+                        @*@Html.Partial("~/Views/Account/Login.cshtml")*@
+                            <a href="@Url.Action("Register","Account")" class="btn btn-link bookmarks">Register</a>
+                            <a href="@Url.Action("Login","Account")" class="btn btn-link bookmarks">Login</a>
                     <!-- end .header-login -->
                     }
                 </div>
@@ -81,7 +83,7 @@
                 @Html.Partial("~/Views/Shared/Partial/_SearchBarPartialView.cshtml")
             }
             <!-- end .header-search-bar -->
-            @if (!Request.IsAuthenticated && 
+            @if (!Request.IsAuthenticated &&
                 HtmlHelperExtensions.IsCurrentControllerAndAction("Home", "Index", ViewContext))
             {
                 @Html.Partial("~/Views/Shared/Partial/_SearchBannerPartialView.cshtml")
